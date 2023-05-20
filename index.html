@@ -1,55 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Quiz-Page</title>
-</head>
-
-<body>
-    <div class="nav" id="navid">
-        <a class="logo" href="index.html">
-            <img src="image__4_-removebg-preview.png" width="148" height="30">
-            <b><p>BETA</p></b>
-        </a>
-        <br>
-        <a href="index.html">Home</a>
-        <a href="courses.html">Grade</a>
-        <a href="#IB">IB</a>
-        <a href="about.html">About</a>
-
-        <a href="javascript:void(0);" class="minimized" onclick="minimize()">
-            <img class="minimize" src="343212.png" width="40" height="40">
-        </a>
-    </div>
-
-    <div class="wrapper">
-        <div class="quiz">
-            <div class="quiz_header">
-                <p>Grade 10</p>
-                <h1>Physics 25 IB</h1>
-                <a><img src="271218.png" width="40" height="40"></a>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="index.css"/>
+    </head>
+    <body>
+        <nav class="flex items-center" id="nav_id">
+            <div class="web-links flex items-center">
+                <a href="test.html">
+                    <img src="g_logo.png" width="148" height="30">
+                </a>
+                <ul class="flex items-center">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a>Courses</a></li>
+                    <li><a>IB</a></li>
+                    <li><a>About</a></li>
+                </ul>
             </div>
-            <div class="quiz_body">
-                <div id="questions">
-                    <!--QUIZ-QUESTION-->
-
-                    <!-- <ul class="option_group">
-                    <li class="option">option 1</li>
-                    <li class="option">option 2</li>
-                    <li class="option">option 3</li>
-                    <li class="option">option 4</li>
-                    </ul> -->
-
-                </div>
-
-                <button class="button-next" onclick="next()">Next Question</button>
+            <div class="login flex items-center"><a>Login</a></div>
+            
+            <div class="minimized flex items-center justify-center">
+                <a onclick="expand_nav()">
+                    <img class="items-center justify-center vertical-align" src="g_minimized_nav.png" width="30" height="30">
+                </a>
             </div>
+        </nav>
+        <div class="expanded-nav" id="exp_nav_id">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a>Courses</a></li>
+                <li><a>IB</a></li>
+                <li><a>About</a></li>
+                <li><a><button>Login</button></a></li>
+            </ul>
         </div>
-    </div>
 
-    <script src="index.js"></script>
-</body>
+        <div class="home flex items-center justify-center">
+            <h1 class="htext title white">AceQuest</h1>
+            <p class="htext white">sus</p>
+        </div>
 
+        <script src="index.js"></script>
+    </body>
 </html>

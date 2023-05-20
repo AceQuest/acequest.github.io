@@ -1,7 +1,20 @@
+function expand_nav() {
+    var nav_id = document.getElementById("a_nav_id");
+    var exp_nav_id = document.getElementById("exp_nav_id");
+    if (exp_nav_id.className === "expanded-nav") {
+        exp_nav_id.className += ' active';
+        console.log(`${exp_nav_id.className}`)
+    } else {
+        exp_nav_id.className = "expanded-nav";
+    }
+  }
+
+
+/**
 let questions = [
     {
         id: 1,
-        question: "Who is Daniel Morgan's crush?",
+        question: "Wds",
         answer: "Kexin",
         options: [
             "Kexin",
@@ -12,7 +25,19 @@ let questions = [
     }
 ];
 
+let course_details = {
+    "math_10c": {
+        title: "Math 10C",
+        description: "A cool subject ngl"
+    },
+    "math_10c_pre_ib": {
+        title: "Math 10C Pre-IB",
+        description: "ib more interesting"
+    }
+}
+
 let question_count = 0;
+let previous_host_id;
 
 window.onload = function () {
     show(question_count);
@@ -64,3 +89,36 @@ function minimize() {
         id.className = "nav"
     }
 }
+
+
+let [first, second, third, fourth] = questions[count].options;
+
+    question.innerHTML = `
+    <h2>Question ${count + 1}.<br>${questions[count].question}</h2>
+    <ul class="option_group">
+    <li class="option">${first}</li>
+    <li class="option">${second}</li>
+    <li class="option">${third}</li>
+    <li class="option">${fourth}</li>
+    </ul>`;
+
+/*
+function toggle_visibility(_id, host_id) {
+    var id = document.getElementById(_id);
+    var cid = document.getElementById('courses');
+
+    if (previous_host_id == host_id) {
+        id.style.display = 'none';
+        previous_host_id = 'none';
+        cid.style.left = '23.5%';
+    } else {
+        id.style.display = 'block';
+        cid.style.left = '10%';
+        previous_host_id = host_id;
+        id.innerHTML = `
+        <h2>${course_details[host_id].title}</h2>
+        <p>${course_details[host_id].description} ${previous_host_id}</p>`;
+
+    }
+}
+*/
