@@ -70,9 +70,7 @@ a, p {
 
 html, body {
     box-sizing: border-box;
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
-  }
+}
 
 body {
     height: 300vh;
@@ -283,6 +281,13 @@ nav .minimized {
 }
 
 @media screen and (max-width: 1200px) {
+    html, body {
+        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
+        width: 100vh;
+        width: calc(var(--vh, 1vh) * 100);
+    }
+
     nav ul:not(:first-child), nav .login, nav {
         display: none;
         margin: 0;
