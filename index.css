@@ -305,24 +305,6 @@ nav .minimized {
         background-size: 1000px 100px;
     }
 
-    .stage-2 {
-        width: 70%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    nav {
-        width: 100%;
-        height: 150px;
-    }
-
-    nav a img {
-        padding-left: 30px;
-        padding-right: 30px;
-        transform: scale(1.25);
-        width: 100%;
-    }
-
     .stage-1 h1 {
         font-size: 100px;
     }
@@ -335,6 +317,9 @@ nav .minimized {
         font-size: 40px;
     }
 
+    .stage-2 {
+        width: 70%;
+    }
 }
 
 .stage-4 {
