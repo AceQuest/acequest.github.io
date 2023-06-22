@@ -302,7 +302,7 @@ nav .minimized {
     }
 
     .bg {
-        background-size: 1000px 100px;
+        background-size: 100% 100px;
     }
 
     .stage-1 h1 {
