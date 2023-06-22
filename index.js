@@ -1,15 +1,26 @@
 function expand_nav() {
-    var nav_id = document.getElementById("a_nav_id");
     var exp_nav_id = document.getElementById("exp_nav_id");
-    if (exp_nav_id.className === "expanded-nav") {
+    if (exp_nav_id.className === "exp-nav") {
         exp_nav_id.className += ' active';
-        console.log(`${exp_nav_id.className}`)
     } else {
-        exp_nav_id.className = "expanded-nav";
+        exp_nav_id.className = "exp-nav";
     }
   }
 
+$(function () {
+    $(document).scroll(function() {
+        var scroll = $(this).scrollTop();
+        if (scroll > 450) {
+            $("nav").addClass('scrolled');
+        } else {
+            $("nav").removeClass('scrolled');
+        }
+    })
+})
 
+/* ok  bruh ok so i need help here follow me index.html hao yan went to japan shot a man raped a pan ok*/
+  
+/**I commented this out because I was working on something else, we can add it baack, but we need to get to the quiz page for this to work tho */
 /**
 let questions = [
     {

@@ -4,41 +4,110 @@
         <link type="text/css" rel="stylesheet" href="index.css"/>
     </head>
     <body>
-        <nav class="flex items-center" id="nav_id">
-            <div class="web-links flex items-center">
-                <a href="index.html">
-                    <img src="g_logo.png" width="148" height="30">
-                </a>
-                <ul class="flex items-center">
+        <div class="navbar flex justify-center">
+            <nav class="flex items-center self-center" id="nav_id">
+                <div class="web-links flex items-center">
+                    <a href="index.html">
+                        <img src="AceQuest-removebg-preview.png" width="148" height="30">
+                    </a>
+                    <ul class="flex items-center">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a>Courses</a></li>
+                        <li><a>IB</a></li>
+                        <li><a>About</a></li>
+                    </ul>
+                </div>
+                <div class="login flex items-center"><a>Login</a></div>
+                
+                <div class="minimized flex items-center justify-center vertical-align">
+                    <a onclick="expand_nav()">
+                        <img class="items-center justify-center vertical-align" src="2170280.png" width="30" height="30">
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="en flex justify-center">
+            <ul class="exp-nav" id="exp_nav_id">
+                <div class="expanded-nav">
                     <li><a href="index.html">Home</a></li>
                     <li><a>Courses</a></li>
                     <li><a>IB</a></li>
                     <li><a>About</a></li>
-                </ul>
-            </div>
-            <div class="login flex items-center"><a>Login</a></div>
-            
-            <div class="minimized flex items-center justify-center">
-                <a onclick="expand_nav()">
-                    <img class="items-center justify-center vertical-align" src="g_minimized_nav.png" width="30" height="30">
-                </a>
-            </div>
-        </nav>
-        <div class="expanded-nav" id="exp_nav_id">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a>Courses</a></li>
-                <li><a>IB</a></li>
-                <li><a>About</a></li>
-                <li><a><button>Login</button></a></li>
+                </div>
+                <div class="exp-nav-login">
+                    <button class="justify-center">Login</button>
+                </div>
             </ul>
         </div>
 
-        <div class="home flex items-center justify-center">
-            <h1 class="htext title white">AceQuest</h1>
-            <p class="htext white">sus</p>
+
+        <div class="home flex items-center text-center flex-col">
+            <div class="stage-1 flex items-center flex-col">
+                <h1 class="title">Unleash Your Academic Potential</h1>
+                <!--So the class=""  title is the header customization (index.css) same for the rest -->
+                <!--Feel free to add anything-->
+                <!--can you run this on your pc? is it saved locally? hmm--> 
+                <!--don't think i can lemme see actually, now i can just had to do workplace tr--> 
+                <!--what? also the font is quite ugly and maybe the color choices-->
+                <p>Comprehensive question bank to practice various subjects in Grade 10 (including IB level) with detailed solutions to sharpen your skills.</p>
+                <div class="bg flex flex-col"></div>
+            </div>
+            <div class="stage-2">
+                <div class="non-ib">
+                    <h2>Regular Grade 10 Courses</h2>
+                    <a>Math 10C</a>
+                    <a>Science 10</a>
+                </div>
+                <div class="ib">
+                    <h2>IB level Grade 10 Courses</h2>
+                    <a>Math 10C IB</a>
+                    <a>Math 20 IB</a>
+                    <a>Physics 25 IB</a>
+                </div>
+            </div>
+
+            <div class="stage-4">
+                <div class="stage-4-1 flex flex-col">
+                    <h2>What aspects we offer</h2>
+                    <h3>Here are some factors that are best for your success</h3>
+                </div>
+                <div class="stage-4-2">
+                    <div class="stage-4-2-1">
+                        <img src="1741737-removebg-preview (2).png" width="100" height="100">
+                        <div class="text">
+                            <h4 class="r1">Various response formats</h4>
+                            <p>dfd  dfdfffff fffffff fffffffff fffffff ffffffff fff</p>
+                        </div>
+                    </div>
+                    <div class="stage-4-2-1">
+                        <img src="1477958-removebg-preview.png" width="100" height="100">
+                        <div>
+                            <h4 class="r1">Comprehensive explanations</h4>
+                            <p>suys</p>
+                        </div>
+                    </div>
+                    <div class="stage-4-2-1">
+                        <img src="1477262-removebg-preview.png" width="100" height="100">
+                        <div>
+                            <h4 class="r2">Build Mastery</h4>
+                            <p>suys</p>
+                        </div>
+                    </div>
+                    <div class="stage-4-2-1">
+                        <img src="1587385-removebg-preview.png" width="100" height="100">
+                        <div>
+                            <h4 class="r2">Further review</h4>
+                            <p>sudfdf dfdfdfdfdfd fdfdfdfdfdfdfdfys</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script src="index.js"></script>
     </body>
 </html>
