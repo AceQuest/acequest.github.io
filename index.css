@@ -304,22 +304,6 @@ nav .minimized {
         padding: 10px;
     }
 
-    .bg {
-        background-size: 1000px 100px;
-    }
-
-    .stage-1 h1 {
-        font-size: 1.5em;
-    }
-    
-    .stage-1 p {
-        font-size: 35px;
-    }
-    
-    .stage-2 .non-ib h2, .stage-2 .ib h2 {
-        font-size: 40px;
-    }
-
     .stage-2 {
         width: 70%;
     }
