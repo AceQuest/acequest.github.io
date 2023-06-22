@@ -1,6 +1,11 @@
 @font-face {
     font-family: 'moderat';
-    src: url("C:/Users/Hao Yan/Downloads/Moderat-Bold/Moderat-Bold.ttf");
+    src: url("Moderat-Extended-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'moderat-bold';
+    src: url("Moderat-Black.ttf");
 }
 
 *, *:before, *:after {
@@ -230,32 +235,6 @@ nav .minimized {
     opacity: 1;
 }
 
-@media screen and (max-width: 1200px) {
-    nav ul:not(:first-child), nav .login, nav {
-        display: none;
-        margin: 0;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        border-radius: 0;
-    }
-
-    nav {
-        width: 100%;
-    }
-
-    .bg {
-        background-size: 1000px 100px;
-    }
-
-    nav .minimized {
-        display: flex;
-    }
-    
-    nav .minimized a {
-        padding: 10px;
-    }
-}
-
 .stage-1 h1 {
     margin-top: 200px;
     font-size: 70px;
@@ -265,18 +244,10 @@ nav .minimized {
 .stage-1 p {
     margin-top: 10px;
     margin-bottom: 70px;
-    font-size: 20px;
+    font-size: 22px;
     width: 700px;
     color: #242424;
     line-height: 30px;
-}
-
-.stage-1 a {
-    margin-top: 30px;
-    font-size: 25px;
-    padding: 15px;
-    border: 3px solid #003535;
-    border-radius: 10px;
 }
 
 .stage-2 {
@@ -303,6 +274,67 @@ nav .minimized {
     border-radius: 10px;
     padding: 20px 30px 20px 30px;
     margin-bottom: 20px;
+}
+
+.stage-2 h3 {
+    grid-column: 1 / 3;
+}
+
+@media screen and (max-width: 1200px) {
+    nav ul:not(:first-child), nav .login, nav {
+        display: none;
+        margin: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 0;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav .minimized {
+        display: flex;
+    }
+    
+    nav .minimized a {
+        padding: 10px;
+    }
+
+    .bg {
+        background-size: 1000px 100px;
+    }
+
+    .stage-2 {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        width: 100%;
+        height: 150px;
+    }
+
+    nav a img {
+        padding-left: 30px;
+        padding-right: 30px;
+        transform: scale(1.25);
+        width: 100%;
+    }
+
+    .stage-1 h1 {
+        font-size: 100px;
+    }
+    
+    .stage-1 p {
+        font-size: 35px;
+    }
+    
+    .stage-2 .non-ib h2, .stage-2 .ib h2 {
+        font-size: 40px;
+    }
+
 }
 
 .stage-4 {
