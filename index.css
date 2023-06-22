@@ -68,7 +68,7 @@ a, p {
     font-size: 6rem;
 }
 
-html, body {
+html {
     box-sizing: border-box;
 }
 
@@ -281,13 +281,6 @@ nav .minimized {
 }
 
 @media screen and (max-width: 1200px) {
-    html, body {
-        height: 100vh;
-        height: calc(var(--vh, 1vh) * 100);
-        width: 100vh;
-        width: calc(var(--vh, 1vh) * 100);
-    }
-
     nav ul:not(:first-child), nav .login, nav {
         display: none;
         margin: 0;
@@ -313,7 +306,7 @@ nav .minimized {
     }
 
     .stage-1 h1 {
-        height: calc(var(--vh, 1vh) * 50);
+        font-size: 1.5em;
     }
     
     .stage-1 p {

@@ -18,13 +18,6 @@ $(function () {
     })
 })
 
-const resizeOps = () => {
-    document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
-};
-
-resizeOps();
-window.addEventListener("resize", resizeOps);
-
 /* ok  bruh ok so i need help here follow me index.html hao yan went to japan shot a man raped a pan ok*/
   
 /**I commented this out because I was working on something else, we can add it baack, but we need to get to the quiz page for this to work tho */
