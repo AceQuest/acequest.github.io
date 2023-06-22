@@ -308,7 +308,7 @@ nav .minimized {
     }
 
     .stage-1 h1 {
-        font-size: 6em;
+        height: calc(var(--vh, 1vh) * 50);
     }
     
     .stage-1 p {
