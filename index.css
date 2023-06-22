@@ -74,7 +74,7 @@ html {
 
 body {
     height: 300vh;
-    width: 100%;
+    width: 100vw;
     margin: 0;
 }
 
@@ -260,7 +260,7 @@ nav .minimized {
 
 .stage-2 .non-ib, .stage-2 .ib {
     display: grid;
-    grid-template-rows: 0.1fr 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 0.1fr 0.3fr 0.3fr 0.3fr;
 }
 
 .stage-2 .non-ib h2, .stage-2 .ib h2 {
