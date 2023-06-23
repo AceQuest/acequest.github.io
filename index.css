@@ -277,13 +277,12 @@ nav .minimized {
 }
 
 .stage-2 h3 {
+    font-size: 20px;
+    margin-bottom: 30px;
     grid-column: 1 / 3;
 }
 
 @media screen and (max-width: 1200px) {
-    html, body {
-        overflow-x: hidden;
-    }
     nav ul:not(:first-child), nav .login, nav {
         display: none;
         margin: 0;
@@ -293,7 +292,11 @@ nav .minimized {
     }
 
     nav {
-        width: 100%;
+        width: 100vw;
+    }
+
+    .exp-nav.active {
+        width: 100vw;
     }
 
     nav .minimized {
@@ -304,8 +307,36 @@ nav .minimized {
         padding: 10px;
     }
 
+    .bg {
+        background-size: 900px 100px;
+    }
+
+    .stage-1 h1 {
+        font-size: 8vw;
+    }
+    
+    .stage-1 p {
+        font-size: 3vw;
+    }
+
     .stage-2 {
-        width: 70%;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        grid-template-columns: 0.5fr;
+    }
+    
+    .stage-2 .non-ib h2, .stage-2 .ib h2 {
+        font-size: 5vw;
+    }
+    
+    .stage-2 .non-ib, .stage-2 .ib {
+        display: grid;
+        grid-template-rows: 0.1fr 0.15fr 0.15fr 0.15fr 0.15fr 0.15fr 0.15fr;
+    }
+
+    .stage-2 h3 {
+        font-size: 2.5vw;
     }
 }
 
