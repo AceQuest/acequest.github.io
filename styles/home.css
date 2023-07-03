@@ -1,0 +1,154 @@
+.bg {
+    background-color: lightskyblue;
+}
+
+.border {
+    margin-top: 50px;
+    border-bottom: 1px solid black;
+    width: 100vw;
+    max-width: 1190px;
+}
+
+nav {
+    height: 30px;
+    background-color: lightskyblue;
+    width: 100vw;
+    padding: 10px 20px;
+}
+
+.nav {
+    width: 100vw;
+    top: 0;
+    max-width: 1150px;
+    text-align: center;
+}
+
+.n-logo {
+    margin-top: 3px;
+    height: 30px;
+    margin-right: 40px;
+}
+
+.n-link {
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.15s color ease-in-out;
+}
+
+.n-link:last-child {
+    margin-right: 0;
+}
+
+.n-link:hover {
+    color: rgb(100, 100, 100);
+}
+
+.n-link img {
+    margin-left: 5px;
+}
+
+.s-1 {
+    margin-top: 45px;
+    padding-top: 180px;
+    padding-bottom: 50px;
+}
+
+.s-1-1 {
+    width: 70%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.s-1-title {
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.s-1-desc {
+    font-size: 17px;
+}
+
+.s-2 {
+    width: 70%;
+    margin-top: 30px;
+    max-width: 800px;
+}
+
+.s-2-1 {
+    grid-template-columns: 0.5fr 0.5fr;
+    border: 1px solid rgb(116, 116, 116);
+    border-radius: 10px;
+    padding: 20px 15px;
+    justify-content: space-around;
+    background-color: lightpink;
+
+}
+
+.s-2-2 {
+    width: 100%;
+}
+
+.s-2-ib, .s-2-reg {
+    align-items: center;
+    justify-items: center;
+    row-gap: 20px;
+}
+
+
+.s-2-ib {
+    grid-template-rows: 0.3fr 0.3fr 0.3fr;
+}
+
+.s-2-reg {
+    grid-template-rows: 0.3fr 0.3fr;
+}
+
+.s-2-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.s-2-course {
+    width: 80%;
+    max-width: 300px;
+    height: 50px;
+    font-size: 17px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: box-shadow 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
+.s-2-course:active {
+    transform: translateX(5px) translateY(5px);
+    box-shadow: none;
+}
+
+.s-3 {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.s-3-title {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.s-3-desc {
+    font-size: 17px;
+}
+
+
+
+
+
+
+
+
+
