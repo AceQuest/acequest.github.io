@@ -10,10 +10,6 @@
 				padding: 0;
 			}
 
-			body {
-				height: 300vh;
-			}
-
 			a,
 			p {
 				font-family: 'Montserrat', sans-serif;
@@ -25,7 +21,7 @@
 				padding: 5px 10px;
 				width: 100%;
 				/*background-color: #87cefa;*/
-				background-color: rgb(56, 179, 255);
+				background-color: #ffffff;
 				justify-content: center;
 				position: fixed;
 				overflow-y: scroll;
@@ -140,7 +136,7 @@
 				height: fit-content;
 				padding: 10px 0px;
 				background-color: white;
-				transition: transform 0.35s cubic-bezier(0,-0.01,.36,1.37), background-color 0.15s ease-in-out;
+				transition: transform 0.35s cubic-bezier(0, -0.01, .36, 1.37), background-color 0.15s ease-in-out;
 				transform: translateY(0px);
 				z-index: 1;
 			}
@@ -209,9 +205,10 @@
 				border: 2px solid rgb(0, 0, 0);
 			}
 
-			
+
 
 			@media screen and (max-width: 1200px) {
+
 				.nav ul li:not(:first-child),
 				.nav a {
 					display: none;
@@ -222,28 +219,99 @@
 				}
 			}
 
-			.hp1 {
+			.login-area {
+				padding-top: 200px;
 				display: flex;
-				justify-content: center;
-				padding-top: 250px;
-				background-color: rgb(56, 179, 255);
+				flex-direction: column;
+				align-items: center;
 			}
 
-			.hp1-1 {
+			.login-area a {
+				cursor: pointer;
+				text-decoration: none;
+			}
+
+			.login-title-area {
 				display: flex;
 				flex-direction: column;
 				text-align: center;
-				width: 70%;
+				width: fit-content;
+				align-items: center;
 			}
 
-			.hp1-1-title {
-				font-size: 60px;
+			.login-title {
 				font-weight: 600;
+				font-size: 30px;
+				margin-bottom: 15px;
 			}
 
-			.hp1-1-desc {
-				font-size: 17px;
-				line-height: 25px;
+			.login-desc p {
+				margin-bottom: 3px;
+			}
+
+			.login-desc a {
+				color: #0064a1;
+			}
+
+			.login-border {
+				margin-top: 20px;
+				border-bottom: 2px solid black;
+				width: 30px;
+			}
+
+			.login-user-pass-area {
+				margin-top: 70px;
+				display: flex;
+				flex-direction: column;
+				width: 70%;
+				max-width: 500px;
+			}
+
+			.login-user, .login-pass {
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 25px;
+			}
+
+			.login-user-desc, .login-pass-desc {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.login-user input, .login-pass input {
+				margin-top: 5px;
+				border-radius: 5px;
+				border: 1px solid grey;
+				height: 35px;
+				font-size: 16px;
+				font-family: 'Montserrat', sans-serif;
+				padding-left: 10px;
+			}
+
+			.login-user input:focus, .login-pass input:focus {
+				box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+			}
+
+			.login-area button {
+				margin-top: 20px;
+				border-radius: 5px;
+				border: 2px solid rgb(0, 157, 255);
+				background-color: white;
+				font-family: 'Montserrat', sans-serif;
+				padding: 10px 30px;
+				font-size: 15px;
+				font-weight: 600;
+				color: #0074bd;
+				transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+			}
+
+			.login-area button:hover {
+				background-color: rgb(0, 157, 255);
+				color: white;
+			}
+
+			.login-area button:focus {
+				border-color: #0074bd;
 			}
 		</style>
 	</head>
@@ -258,7 +326,8 @@
 						<a class="nav-link">Courses</a>
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 							<g fill="#000000" fillrule="nonzero">
-								<path d="M11.293 14.693L7.3 10.7a.99.99 0 1 1 1.4-1.4l3.3 3.3 3.3-3.3a.99.99 0 0 1 1.4 1.4l-3.993 3.993a1 1 0 0 1-1.414 0z">
+								<path
+									d="M11.293 14.693L7.3 10.7a.99.99 0 1 1 1.4-1.4l3.3 3.3 3.3-3.3a.99.99 0 0 1 1.4 1.4l-3.993 3.993a1 1 0 0 1-1.414 0z">
 							</g>
 						</svg>
 					</li>
@@ -291,13 +360,32 @@
 				</div>
 			</ul>
 		</div>
-		<div class="hp1">
-			<div class="hp1-1">
-				<p class="hp1-1-title">Unleash Your Academic Potential</p>
-				<p class="hp1-1-desc">Comprehensive question bank to practice
-					various subjects in Grade 10 (including IB
-					level) with detailed solutions to sharpen your skills.</p>
+		<div class="login-area">
+			<div class="login-title-area">
+				<p class="login-title">Login</p>
+				<div class="login-desc">
+					<p>Don't have an account?</p>
+					<a href="sign-up.html">Sign up for free.</a>
+				</div>
+				<div class="login-border"></div>
 			</div>
+			<div class="login-user-pass-area">
+				<div class="login-user">
+					<div class="login-user-desc">
+						<p>Email or Username</p>
+						<a>Forgot Your Username?</a>
+					</div>
+					<input class="search-bar" type="text" placeholder="Email or Username">
+				</div>
+				<div class="login-pass">
+					<div class="login-pass-desc">
+						<p>Password</p>
+						<a>Forgot Your Password?</a>
+					</div>
+					<input class="search-bar" type="text" placeholder="Password">
+				</div>
+			</div>
+			<button>Login</button>
 		</div>
 		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
