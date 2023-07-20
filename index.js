@@ -3,6 +3,7 @@ $(function () {
     var prev_scroll_pos;
     console.log(document.location.href.match(/[^\/]+$/)[0]);
     if (document.location.href.match(/[^\/]+$/)[0] == "index.html") {
+        console.log(document.location.href.match(/[^\/]+$/)[0]);
         $(document).on("scroll", function() {
             scroll_pos = $(this).scrollTop();
             if (scroll_pos > 50) {
@@ -16,25 +17,14 @@ $(function () {
             }
         });
     } else {
-        $("nav").css("box-shadow", "0px 2px 10px rgba(0, 0, 0, 0.15)");
+        $("nav").css("box-shadow", "0px 2px 10px rgba(0, 0, 0, 0.15)", "background-color", "#ffffff");
     }
 
     $(".hamburger").on("click", function() {
-        $(".min-nav").toggleClass("active");
-        if ($(".min-nav").hasClass("active")) {
-            $("nav").css("box-shadow", "0px 0px 0px rgba(0, 0, 0, 0.15)");
-        } else {
-            $("nav").css("box-shadow", "0px 2px 10px rgba(0, 0, 0, 0.15)");
-        }
-
-        if (document.location.href.match(/[^\/]+$/)[0] == "index2.html") {
-            if (scroll_pos == 0 || !scroll_pos) {
-                $(".min-nav").css("background-color", "rgb(56, 179, 255)");
-            } else {
-                $("nav").removeClass('scrolled').css("background-color", "#ffffff");
-                $(".min-nav").css("background-color", "#fffff");
-            }
-            prev_scroll_pos = scroll_pos;
-        }
+        $(".min-nav").addClass("active");
     });
+
+    $(".close").on("click", function() {
+        $(".min-nav").removeClass("active");
+    })
 })

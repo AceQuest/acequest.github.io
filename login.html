@@ -21,7 +21,7 @@
 				padding: 5px 10px;
 				width: 100%;
 				/*background-color: #87cefa;*/
-				background-color: #ffffff;
+				background-color: rgb(56, 179, 255);
 				justify-content: center;
 				position: fixed;
 				overflow-y: scroll;
@@ -129,80 +129,104 @@
 				fill: #0064a1;
 			}
 
+			
+
+			/*
+			$(".hamburger").on("click", function() {
+        if (document.location.href.match(/[^\/]+$/)[0] == "index.html") {
+            if (scroll_pos == 0 || !scroll_pos) {
+                $(".min-nav").css("background-color", "rgb(56, 179, 255)");
+            } else {
+                $("nav").removeClass('scrolled').css("background-color", "#ffffff");
+                $(".min-nav").css("background-color", "#fffff");
+            }
+            prev_scroll_pos = scroll_pos;
+        } else {
+            if ($(".min-nav").hasClass("active")) {
+                $("nav").css("box-shadow", "0px 0px 0px rgba(0, 0, 0, 0.15)");
+            } else {
+                $("nav").css("box-shadow", "0px 2px 10px rgba(0, 0, 0, 0.15)");
+            }
+        }
+        $(".min-nav").toggleClass("active");
+    });*/
+
+			
 			.min-nav {
-				width: 100%;
 				position: fixed;
-				top: -200px;
-				height: fit-content;
-				padding: 10px 0px;
+				right: -300px;
+				z-index: 10;
 				background-color: white;
-				transition: transform 0.35s cubic-bezier(0, -0.01, .36, 1.37), background-color 0.15s ease-in-out;
-				transform: translateY(0px);
-				z-index: 1;
+				display: flex;
+				flex-direction: column;
+				width: 30%;
+				max-width: 250px;
+				height: 100vh;
+				align-items: center;
+				padding: 10px 20px;
+				transform: translateX(0);
+				transition: transform 0.35s cubic-bezier(0,.05,.32,1.31);
+				box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.15);
 			}
 
 			.min-nav.active {
-				box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
-				transform: translateY(260px);
+				transform: translateX(-300px);
 			}
 
-			.min-nav ul {
+			.min-nav button {
+				border: none;
+				background-color: white;
+				height: 42px;
+				width: 42px;
 				display: flex;
-				list-style-type: none;
-				flex-direction: column;
-				justify-content: center;
+				margin-bottom: 20px;
+				padding: 5px;
+				align-self: flex-end;
 			}
 
-			.min-nav li {
-				margin: 0px 10px;
-				padding: 10px 20px;
-				transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
-				cursor: pointer;
+			.min-nav input {
+				background-image: url(images/search.png);
+				background-repeat: no-repeat;
+				text-indent: 40px;
+				height: 40px;
+				background-size: 30px 30px;
+				margin-bottom: 10px;
+				width: 100%;
+				background-position: 5px 5px;
+				border-radius: 8px;
+				border: none;
+				background-color: whitesmoke;
+				font-size: 16px;
+				font-family: 'Montserrat', sans-serif;
 			}
 
-			.min-nav li:nth-child(5) {
-				padding: 0;
-				margin: 10px 30px;
-				border-bottom: 1px black solid;
+			.min-nav-border {
+				border-bottom: 1px solid rgb(228, 228, 228);
+				height: 2px;
+				width: 100%;
+				margin-top: 8px;
+				margin-bottom: 10px;
 			}
 
-			.min-nav li:hover {
-				background-color: rgb(0, 157, 255);
-				color: white;
-			}
-
-			.su-li {
+			.min-nav-link {
 				display: flex;
 				align-items: center;
-				justify-content: center;
 				width: 100%;
+				margin-bottom: 20px;
+				padding-left: 13px;
 			}
 
-			.su-li li {
-				text-align: center;
-				margin: 10px 0px;
-				border-radius: 30px;
-				background-color: rgb(0, 157, 255);
-				width: 25%;
-				font-weight: 600;
-				color: white;
-				border: solid 2px rgb(0, 157, 255);
-				transition: 0.15s background-color ease-in-out, 0.15s color ease-in-out;
-			}
-
-			.su-li li:first-child {
+			.min-nav-link img {
 				margin-right: 10px;
-				background-color: white;
-				color: rgb(0, 157, 255);
 			}
 
-			.su-li li:first-child:hover {
-				background-color: rgb(0, 157, 255);
-				color: white;
+			.mnf {
+				margin: 0;
 			}
 
-			.su-li li:active {
-				border: 2px solid rgb(0, 0, 0);
+			.min-nav-link img {
+				height: 25px;
+				width: 25px;
 			}
 
 
@@ -320,14 +344,13 @@
 		<nav>
 			<div class="nav">
 				<ul>
-					<li><img class="nav-link" src="images/AceQuest-removebg-preview.png"></li>
+					<li><img class="nav-link" src="images/acequest-logo.png"></li>
 					<li><a class="nav-link">Home</a></li>
 					<li>
 						<a class="nav-link">Courses</a>
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 							<g fill="#000000" fillrule="nonzero">
-								<path
-									d="M11.293 14.693L7.3 10.7a.99.99 0 1 1 1.4-1.4l3.3 3.3 3.3-3.3a.99.99 0 0 1 1.4 1.4l-3.993 3.993a1 1 0 0 1-1.414 0z">
+								<path d="M11.293 14.693L7.3 10.7a.99.99 0 1 1 1.4-1.4l3.3 3.3 3.3-3.3a.99.99 0 0 1 1.4 1.4l-3.993 3.993a1 1 0 0 1-1.414 0z">
 							</g>
 						</svg>
 					</li>
@@ -348,17 +371,39 @@
 			</div>
 		</nav>
 		<div class="min-nav">
-			<ul>
-				<li><a>Home</a></li>
-				<li><a>Courses</a></li>
-				<li><a>IB</a></li>
-				<li><a>About</a></li>
-				<li></li>
-				<div class="su-li">
-					<li><a href="sign-up.html">Sign Up</a></li>
-					<li><a href="login.html">Login</a></li>
-				</div>
-			</ul>
+			<button class="close min-nav-link">
+				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x" viewBox="3.1 3.1 10 10">
+					<g fill="#000000" fillrule="nonzero">
+						<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+					</g>
+				</svg>
+			</button>
+			<input class="min-nav-search-bar" type="text" placeholder="Search">
+			<div class="mnf min-nav-link">
+				<img src="images/home.png" draggable="false">
+				<a>Home</a>
+			</div>
+			<div class="min-nav-border"></div>
+			<div class="min-nav-link">
+				<img src="images/courses.png" draggable="false">
+				<a>Courses</a>
+			</div>
+			<div class="min-nav-link">
+				<img src="images/ib.png" draggable="false">
+				<a>IB</a>
+			</div>
+			<div class="min-nav-link">
+				<img src="images/resources.png" draggable="false">
+				<a>Resources</a>
+			</div>
+			<div class="min-nav-link">
+				<img src="images/about.png" draggable="false">
+				<a>About</a>
+			</div>
+			<div class="min-nav-su-li">
+				<a href="sign-up.html">Sign Up</a>
+				<a href="login.html">Login</a>
+			</div>
 		</div>
 		<div class="login-area">
 			<div class="login-title-area">
