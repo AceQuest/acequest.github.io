@@ -2,7 +2,7 @@ $(function () {
     var scroll_pos;
     var prev_scroll_pos;
     console.log(document.location.href.match(/[^\/]+$/)[0]);
-    if (document.location.href.match(/[^\/]+$/)[0] == "index2.html") {
+    if (document.location.href.match(/[^\/]+$/)[0] == "index.html") {
         $(document).on("scroll", function() {
             scroll_pos = $(this).scrollTop();
             if (scroll_pos > 50) {
@@ -26,7 +26,7 @@ $(function () {
         } else {
             $("nav").css("box-shadow", "0px 2px 10px rgba(0, 0, 0, 0.15)");
         }
-        
+
         if (document.location.href.match(/[^\/]+$/)[0] == "index2.html") {
             if (scroll_pos == 0 || !scroll_pos) {
                 $(".min-nav").css("background-color", "rgb(56, 179, 255)");
