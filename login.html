@@ -21,7 +21,7 @@
 				padding: 5px 10px;
 				width: 100%;
 				/*background-color: #87cefa;*/
-				background-color: rgb(56, 179, 255);
+				background-color: #ffffff;
 				justify-content: center;
 				position: fixed;
 				overflow-y: scroll;
@@ -104,28 +104,30 @@
 				left: 10.49px;
 				width: 21px;
 				height: 21px;
-				opacity: 0;
-				background-color: lightblue;
-				transition: transform 0.35s cubic-bezier(0, .35, 1, 1.82), opacity 0.35s ease-in-out;
-				z-index: -5;
 			}
 
-			.nav button:hover .hamburger-hover {
+			.nav button, .min-nav-sidebar button {
+				z-index: 6;
+			}
+
+			.hamburger-hover, .close-hover {
+				opacity: 0;
+				z-index: -2;
+				background-color: rgb(0, 157, 255);
+				transition: transform 0.35s cubic-bezier(0, .35, 1, 1.82), opacity 0.35s ease-in-out;
+			}
+
+			.nav button:hover .hamburger-hover, .min-nav-sidebar button:hover .close-hover {
 				transform: scale(2);
 				opacity: 0.5;
 			}
 
-			.nav button svg g {
+			.nav button svg g, .min-nav-sidebar button svg g {
 				transition: fill 0.35s ease-in-out;
-				z-index: 1000;
 			}
 
-			nav.scrolled .nav button:hover svg g {
+			nav.scrolled .nav button:hover svg g, .min-nav-sidebar button:hover svg g {
 				background-color: white;
-				fill: #0064a1;
-			}
-
-			nav.scrolled .nav button:hover svg g {
 				fill: #0064a1;
 			}
 
@@ -151,29 +153,60 @@
         $(".min-nav").toggleClass("active");
     });*/
 
-			
-			.min-nav {
-				position: fixed;
-				right: -300px;
-				z-index: 10;
-				background-color: white;
-				display: flex;
-				flex-direction: column;
-				width: 30%;
-				max-width: 250px;
+			.min-nav-area {
+				width: 100vw;
 				height: 100vh;
-				align-items: center;
-				padding: 10px 20px;
-				transform: translateX(0);
-				transition: transform 0.35s cubic-bezier(0,.05,.32,1.31);
-				box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.15);
+				display: flex;
+				position: fixed;
+				z-index: 3;
+				transition: z-index 0.15s ease-in-out;
 			}
 
-			.min-nav.active {
+			.window-button {
+				display: none;
+				width: 100%;
+				height: 100%;
+				background-color: black;
+				opacity: 0.3;
+				cursor: pointer;
+				border: none;
+			}
+
+			.min-nav-sidebar {
+				height: 100vh;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				position: fixed;
+				right: -300px;
+				transform: translateX(0);
+				box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.15);
+				transition: transform 0.35s cubic-bezier(0,.05,.32,1.31);
+				background-color: white;
+				width: 30%;
+				max-width: 250px;
+			}
+
+			.min-nav-area.active .min-nav-sidebar {
 				transform: translateX(-300px);
 			}
 
-			.min-nav button {
+			.min-nav-area.active .window-button {
+				display: block;
+			}
+
+			.min-nav-top {
+				display: flex;
+				flex-direction: column;
+				height: 70%;
+				align-items: center;
+			}
+
+			.mnf {
+				margin: 0;
+			}
+
+			.min-nav-top button {
 				border: none;
 				background-color: white;
 				height: 42px;
@@ -184,8 +217,8 @@
 				align-self: flex-end;
 			}
 
-			.min-nav input {
-				background-image: url(images/search.png);
+			.min-nav-top input {
+				background-image: url(images/images2/search.png);
 				background-repeat: no-repeat;
 				text-indent: 40px;
 				height: 40px;
@@ -204,32 +237,67 @@
 				border-bottom: 1px solid rgb(228, 228, 228);
 				height: 2px;
 				width: 100%;
-				margin-top: 8px;
-				margin-bottom: 10px;
+				margin-top: 10px;
+				margin-bottom: 12px;
 			}
 
 			.min-nav-link {
 				display: flex;
 				align-items: center;
 				width: 100%;
-				margin-bottom: 20px;
+				margin-bottom: 5px;
 				padding-left: 13px;
+				padding: 10px 0px 10px 13px;
+				border-radius: 10px;
+				transition: background-color 0.15s ease-in-out;
+				border: 2px solid transparent;
 			}
 
-			.min-nav-link img {
-				margin-right: 10px;
+			.min-nav-link:hover {
+				background-color: rgb(233, 233, 233);
 			}
 
-			.mnf {
-				margin: 0;
+			.min-nav-link:active {
+				border: 2px black solid;
 			}
 
 			.min-nav-link img {
 				height: 25px;
 				width: 25px;
+				margin-right: 10px;
 			}
 
+			.min-nav-sidebar button {
+				margin-top: 7px;
+				margin-right: 7px;
+				display: flex;
+				height: 42px;
+				width: 42px;
+				padding: 5px;
+				align-self: flex-end;
+				justify-content: center;
+				background-color: transparent;
+			}
 
+			.close-hover {
+				border: none;
+				border-radius: 42px;
+				position: absolute;
+				top: 12px;
+				right: 10px;
+				width: 21px;
+				height: 21px;
+			}
+
+			.close img {
+				margin: 0;
+				
+			}
+
+			.min-nav-bottom {
+				display: flex;
+				align-items: center;
+			}
 
 			@media screen and (max-width: 1200px) {
 
@@ -337,6 +405,7 @@
 			.login-area button:focus {
 				border-color: #0074bd;
 			}
+
 		</style>
 	</head>
 
@@ -370,39 +439,49 @@
 				</button>
 			</div>
 		</nav>
-		<div class="min-nav">
-			<button class="close min-nav-link">
-				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x" viewBox="3.1 3.1 10 10">
-					<g fill="#000000" fillrule="nonzero">
-						<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-					</g>
-				</svg>
-			</button>
-			<input class="min-nav-search-bar" type="text" placeholder="Search">
-			<div class="mnf min-nav-link">
-				<img src="images/home.png" draggable="false">
-				<a>Home</a>
-			</div>
-			<div class="min-nav-border"></div>
-			<div class="min-nav-link">
-				<img src="images/courses.png" draggable="false">
-				<a>Courses</a>
-			</div>
-			<div class="min-nav-link">
-				<img src="images/ib.png" draggable="false">
-				<a>IB</a>
-			</div>
-			<div class="min-nav-link">
-				<img src="images/resources.png" draggable="false">
-				<a>Resources</a>
-			</div>
-			<div class="min-nav-link">
-				<img src="images/about.png" draggable="false">
-				<a>About</a>
-			</div>
-			<div class="min-nav-su-li">
-				<a href="sign-up.html">Sign Up</a>
-				<a href="login.html">Login</a>
+		<div class="min-nav-area">
+			<button class="window-button"></button>
+			<div class="min-nav-sidebar">
+				<button class="close">
+					<svg class="close-icon">
+						<use xlink:href="/assets/symbol-defs-a5855903873ce84df0ac1479b52017a5b413ca87e3a2b32a89bfc29b76bc403c.svg#bs-menu-close"></use>
+					</svg>
+					<div class="close-hover"></div>
+				</button>
+				<div class="min-nav-top">
+					<input class="min-nav-search-bar" type="text" placeholder="Search">
+					<div class="mnf min-nav-link">
+						<img src="images/images2/home.png" draggable="false">
+						<a>Home</a>
+					</div>
+					<div class="min-nav-border"></div>
+					<div class="min-nav-link">
+						<img src="images/images2/courses.png" draggable="false">
+						<a>Courses</a>
+					</div>
+					<div class="min-nav-link">
+						<img src="images/images2/ib.png" draggable="false">
+						<a>IB</a>
+					</div>
+					<div class="min-nav-link">
+						<img src="images/images2/resources.png" draggable="false">
+						<a>Resources</a>
+					</div>
+					<div class="min-nav-link">
+						<img src="images/images2/info.png" draggable="false">
+						<a>About</a>
+					</div>
+					<div class="min-nav-su-li">
+						<a href="sign-up.html">Sign Up</a>
+						<a href="login.html">Login</a>
+					</div>
+				</div>
+				<div class="min-nav-bottom">
+					<button>
+						<img src="images/images2/night-mode.png" draggable="false">
+					</button>
+					<p>Ace Quest <span>v1.5.1</span></p>
+				</div>
 			</div>
 		</div>
 		<div class="login-area">

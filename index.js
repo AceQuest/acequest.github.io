@@ -21,10 +21,14 @@ $(function () {
     }
 
     $(".hamburger").on("click", function() {
-        $(".min-nav").addClass("active");
+        $(".min-nav-area").addClass("active").css("z-index", "100");
     });
 
     $(".close").on("click", function() {
-        $(".min-nav").removeClass("active");
+        $(".min-nav-area").removeClass("active").css("z-index", "3");
+    });
+
+    $(".window-button").on("click", function() {
+        $(".min-nav-area").removeClass("active").css("z-index", "3");
     })
 })
