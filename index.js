@@ -25,10 +25,10 @@ $(function () {
     });
 
     $(".close").on("click", function() {
-        $(".min-nav-area").removeClass("active").css("z-index", "3");
+        $(".min-nav-area").removeClass("active").css("z-index", "-1");
     });
 
     $(".window-button").on("click", function() {
-        $(".min-nav-area").removeClass("active").css("z-index", "3");
+        $(".min-nav-area").removeClass("active").css("z-index", "-1");
     })
 })

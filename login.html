@@ -5,6 +5,7 @@
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
+
 			* {
 				margin: 0;
 				padding: 0;
@@ -21,12 +22,11 @@
 				padding: 5px 10px;
 				width: 100%;
 				/*background-color: #87cefa;*/
-				background-color: #ffffff;
+				background-color: white;
 				justify-content: center;
 				position: fixed;
 				overflow-y: scroll;
 				transition: background-color 0.15s ease-in-out;
-				z-index: 5;
 			}
 
 			nav.scrolled {
@@ -107,14 +107,14 @@
 			}
 
 			.nav button, .min-nav-sidebar button {
-				z-index: 6;
+				z-index: 10;
 			}
 
 			.hamburger-hover, .close-hover {
 				opacity: 0;
-				z-index: -2;
 				background-color: rgb(0, 157, 255);
 				transition: transform 0.35s cubic-bezier(0, .35, 1, 1.82), opacity 0.35s ease-in-out;
+				z-index: -1;
 			}
 
 			.nav button:hover .hamburger-hover, .min-nav-sidebar button:hover .close-hover {
@@ -122,7 +122,8 @@
 				opacity: 0.5;
 			}
 
-			.nav button svg g, .min-nav-sidebar button svg g {
+			.nav button svg, .min-nav-sidebar button svg {
+				fill: black;
 				transition: fill 0.35s ease-in-out;
 			}
 
@@ -158,18 +159,20 @@
 				height: 100vh;
 				display: flex;
 				position: fixed;
-				z-index: 3;
 				transition: z-index 0.15s ease-in-out;
+				z-index: -1;
 			}
 
 			.window-button {
 				display: none;
 				width: 100%;
-				height: 100%;
+				height: 100;
 				background-color: black;
-				opacity: 0.3;
 				cursor: pointer;
 				border: none;
+				transition: opacity 0.15s ease-in-out;
+				display: block;
+				opacity: 0;
 			}
 
 			.min-nav-sidebar {
@@ -181,29 +184,32 @@
 				right: -300px;
 				transform: translateX(0);
 				box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.15);
-				transition: transform 0.35s cubic-bezier(0,.05,.32,1.31);
+				transition: transform 0.35s cubic-bezier(.03,.36,0,1.09);
 				background-color: white;
-				width: 30%;
+				width: 40%;
 				max-width: 250px;
+				min-width: 210px;
+			}
+
+			.min-nav-area.active .window-button {
+				opacity: 0.3;
 			}
 
 			.min-nav-area.active .min-nav-sidebar {
 				transform: translateX(-300px);
 			}
 
-			.min-nav-area.active .window-button {
-				display: block;
-			}
-
 			.min-nav-top {
 				display: flex;
 				flex-direction: column;
-				height: 70%;
 				align-items: center;
 			}
 
-			.mnf {
-				margin: 0;
+			.min-nav {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				height: 100%;
 			}
 
 			.min-nav-top button {
@@ -218,14 +224,14 @@
 			}
 
 			.min-nav-top input {
-				background-image: url(images/images2/search.png);
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 29 29' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-search'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.3-4.3'/%3E%3C/svg%3E");
 				background-repeat: no-repeat;
 				text-indent: 40px;
 				height: 40px;
 				background-size: 30px 30px;
 				margin-bottom: 10px;
 				width: 100%;
-				background-position: 5px 5px;
+				background-position: 6px 7.5px;
 				border-radius: 8px;
 				border: none;
 				background-color: whitesmoke;
@@ -237,8 +243,8 @@
 				border-bottom: 1px solid rgb(228, 228, 228);
 				height: 2px;
 				width: 100%;
-				margin-top: 10px;
-				margin-bottom: 12px;
+				margin-top: 5px;
+				margin-bottom: 8px;
 			}
 
 			.min-nav-link {
@@ -251,6 +257,9 @@
 				border-radius: 10px;
 				transition: background-color 0.15s ease-in-out;
 				border: 2px solid transparent;
+				color: black;
+				text-decoration: none;
+				cursor: pointer;
 			}
 
 			.min-nav-link:hover {
@@ -261,13 +270,62 @@
 				border: 2px black solid;
 			}
 
-			.min-nav-link img {
-				height: 25px;
-				width: 25px;
+			.min-nav-link svg {
 				margin-right: 10px;
 			}
 
-			.min-nav-sidebar button {
+			.min-nav-link-seperator {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.min-nav-link-seperator-group {
+				display: flex;
+				align-items: center;
+			}
+		
+
+			.min-nav-link .expand {
+				justify-self: right;
+			}
+
+			.min-nav-su-li {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+			}
+
+			.min-nav-su-li a {
+				background-color: rgb(0, 157, 255);
+				color: white;
+				text-decoration: none;
+				border: 2px solid rgb(0, 157, 255);
+				font-weight: 600;
+				height: 35px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 10px;
+				transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+			}
+
+			.min-nav-su-li a:first-child {
+				margin-top: 10px;
+				margin-bottom: 10px;
+				background-color: white;
+				color: #0074bd;
+			}
+
+			.min-nav-su-li a:first-child:hover {
+				background-color: rgb(0, 157, 255);
+				color: white;
+			}
+
+			.min-nav-su-li a:active {
+				border-color: #0074bd;
+			}
+
+			.close {
 				margin-top: 7px;
 				margin-right: 7px;
 				display: flex;
@@ -277,26 +335,49 @@
 				align-self: flex-end;
 				justify-content: center;
 				background-color: transparent;
+				border: none;
+				align-items: center;
+				position: relative;
+				margin-bottom: 20px;
 			}
 
 			.close-hover {
 				border: none;
 				border-radius: 42px;
 				position: absolute;
-				top: 12px;
-				right: 10px;
+				top: 10px;
+				right: 11px;
 				width: 21px;
 				height: 21px;
-			}
-
-			.close img {
-				margin: 0;
-				
 			}
 
 			.min-nav-bottom {
 				display: flex;
 				align-items: center;
+				justify-content: space-between;
+				margin-bottom: 10px;
+			}
+
+			.min-nav-bottom p {
+				margin-right: 5px;
+			}
+
+			.min-nav-bottom button {
+				background-color: transparent;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 35px;
+				width: 35px;
+				border: none;
+				border-radius: 17.5px;
+			}
+
+			.min-nav-bottom button:hover {
+				background-color: rgb(233, 233, 233);
+			}
+			.min-nav-button button:active {
+				border: 2px black solid;
 			}
 
 			@media screen and (max-width: 1200px) {
@@ -417,10 +498,8 @@
 					<li><a class="nav-link">Home</a></li>
 					<li>
 						<a class="nav-link">Courses</a>
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-							<g fill="#000000" fillrule="nonzero">
-								<path d="M11.293 14.693L7.3 10.7a.99.99 0 1 1 1.4-1.4l3.3 3.3 3.3-3.3a.99.99 0 0 1 1.4 1.4l-3.993 3.993a1 1 0 0 1-1.414 0z">
-							</g>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="m6 9 6 6 6-6"/>
 						</svg>
 					</li>
 					<li><a class="nav-link">IB</a></li>
@@ -428,12 +507,8 @@
 				</ul>
 				<a class="nav-link" href="login.html">Login</a>
 				<button class="hamburger nav-link">
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-						<g fill="#000000" fillrule="nonzero">
-							<path
-								d="M19 11H5c-.6 0-1 .4-1 1s.4 1 1 1h14c.6 0 1-.4 1-1s-.4-1-1-1zM19 5H5c-.6 0-1 .4-1 1s.4 1 1 1h14c.6 0 1-.4 1-1s-.4-1-1-1zM19 17H5c-.6 0-1 .4-1 1s.4 1 1 1h14c.6 0 1-.4 1-1s-.4-1-1-1z">
-							</path>
-						</g>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>
 					</svg>
 					<div class="hamburger-hover"></div>
 				</button>
@@ -443,44 +518,63 @@
 			<button class="window-button"></button>
 			<div class="min-nav-sidebar">
 				<button class="close">
-					<svg class="close-icon">
-						<use xlink:href="/assets/symbol-defs-a5855903873ce84df0ac1479b52017a5b413ca87e3a2b32a89bfc29b76bc403c.svg#bs-menu-close"></use>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M18 6 6 18"/><path d="m6 6 12 12"/>
 					</svg>
 					<div class="close-hover"></div>
 				</button>
-				<div class="min-nav-top">
-					<input class="min-nav-search-bar" type="text" placeholder="Search">
-					<div class="mnf min-nav-link">
-						<img src="images/images2/home.png" draggable="false">
-						<a>Home</a>
+				<div class="min-nav">
+					<div class="min-nav-top">
+						<input class="min-nav-search-bar" type="text" placeholder="Search">
+						<a class="min-nav-link" href="index.html">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+							</svg>
+							<p>Home</p>
+						</a>
+						<div class="min-nav-border"></div>
+						<a class="min-nav-link min-nav-link-seperator">
+							<div class="min-nav-link-seperator-group">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/>
+								</svg>
+								<p>Courses</p>
+							</div>
+							<svg class="expand" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="m6 9 6 6 6-6"/>
+							</svg>
+						</a>
+						<a class="min-nav-link">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M21.54 15H17a2 2 0 0 0-2 2v4.54"/><path d="M7 3.34V5a3 3 0 0 0 3 3v0a2 2 0 0 1 2 2v0c0 1.1.9 2 2 2v0a2 2 0 0 0 2-2v0c0-1.1.9-2 2-2h3.17"/><path d="M11 21.95V18a2 2 0 0 0-2-2v0a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05"/>
+								<circle cx="12" cy="12" r="10"/>
+							</svg>
+							<p>IB</p>
+						</a>
+						<a class="min-nav-link">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" x2="12" y1="22" y2="12"/>
+							</svg>
+							<p>Resources</p>
+						</a>
+						<a class="min-nav-link">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/>
+							</svg>
+							<p>About</p>
+						</a>
+						<div class="min-nav-su-li">
+							<a href="sign-up.html">Sign Up</a>
+							<a href="login.html">Login</a>
+						</div>
 					</div>
-					<div class="min-nav-border"></div>
-					<div class="min-nav-link">
-						<img src="images/images2/courses.png" draggable="false">
-						<a>Courses</a>
+				
+					<div class="min-nav-bottom">
+						<button>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+						</button>
+						<p>Ace Quest <span>v1.5.1</span></p>
 					</div>
-					<div class="min-nav-link">
-						<img src="images/images2/ib.png" draggable="false">
-						<a>IB</a>
-					</div>
-					<div class="min-nav-link">
-						<img src="images/images2/resources.png" draggable="false">
-						<a>Resources</a>
-					</div>
-					<div class="min-nav-link">
-						<img src="images/images2/info.png" draggable="false">
-						<a>About</a>
-					</div>
-					<div class="min-nav-su-li">
-						<a href="sign-up.html">Sign Up</a>
-						<a href="login.html">Login</a>
-					</div>
-				</div>
-				<div class="min-nav-bottom">
-					<button>
-						<img src="images/images2/night-mode.png" draggable="false">
-					</button>
-					<p>Ace Quest <span>v1.5.1</span></p>
 				</div>
 			</div>
 		</div>
