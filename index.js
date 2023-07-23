@@ -1,8 +1,8 @@
 $(function () {
     var scroll_pos;
     var prev_scroll_pos;
-    console.log(document.location.href.match(/[^\/]+$/)[0]);
-    if (document.location.href.match(/[^\/]+$/)[0] == "index.html") {
+
+    if (document.location.href.match(/[^\/]+$/)[0] == "index.html" || !document.location.href.match(/[^\/]+$/)[0]) {
         console.log(document.location.href.match(/[^\/]+$/)[0]);
         $(document).on("scroll", function() {
             scroll_pos = $(this).scrollTop();
