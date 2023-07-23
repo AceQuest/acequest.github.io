@@ -3,7 +3,6 @@ $(function () {
     var prev_scroll_pos;
 
     if (document.location.href.match(/[^\/]+$/)[0] == "index.html" || !document.location.href.match(/[^\/]+$/)[0]) {
-        console.log(document.location.href.match(/[^\/]+$/)[0]);
         $(document).on("scroll", function() {
             scroll_pos = $(this).scrollTop();
             if (scroll_pos > 50) {
