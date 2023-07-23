@@ -2,7 +2,8 @@ $(function () {
     var scroll_pos;
     var prev_scroll_pos;
 
-    if (document.location.href.match(/[^\/]+$/)[0] == "index.html" || !document.location.href.match(/[^\/]+$/)[0]) {
+    if (window.location.href == "https://acequest.github.io" || window.location.href == "https://acequest.github.io/index.html" || window.location.href == "http://127.0.0.1:5500/index.html") {
+        alert(window.location.href);
         $(document).on("scroll", function() {
             scroll_pos = $(this).scrollTop();
             if (scroll_pos > 50) {
