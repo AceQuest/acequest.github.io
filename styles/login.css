@@ -204,9 +204,17 @@ input[type="password"] {
     align-items: center;
     margin-right: 5px;
 }
+
 .button-text {
   font-size: 15px;
   font-weight: bold;
   /* Use the Roboto font that is loaded in the <head> */
   font-family: sans-serif, sans-serif;
+}
+
+.name {
+    color: black;
+    font-size: 20px;
+    width: 100px;
+    height: 100px;
 }
