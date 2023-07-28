@@ -1,0 +1,195 @@
+.sign-up-area {
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-up-area a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.sign-up-title-area {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: fit-content;
+    align-items: center;
+}
+
+.sign-up-title {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.sign-up-desc p {
+    margin-bottom: 3px;
+}
+
+.sign-up-desc a {
+    color: #0064a1;
+}
+
+.sign-up-border {
+    margin-top: 20px;
+    border-bottom: 2px solid black;
+    width: 30px;
+}
+
+.sign-up-details-area {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    max-width: 500px;
+}
+
+.sign-up-details-1,
+.sign-up-details-2,
+.sign-up-details-3,
+.sign-up-details-4 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.sign-up-details-area p {
+    margin-bottom: 7px;
+}
+
+.sign-up-details-area input {
+    border-radius: 5px;
+    border: none;
+    height: 35px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 10px;
+    outline: 2px rgb(228, 228, 228) solid;
+    transition: border-color 0.15s ease-in-out, outline-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input[type="password"] {
+    font-size: 24px;
+    font: caption;
+    font-family: 'pass';
+    font-style: normal;
+}
+
+.password {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.password input {
+    width: 100%;
+}
+
+.password button {
+    position: absolute;
+    border: none;
+    background-color: white;
+    right: 10px;
+}
+
+.visible-toggle {
+    display: flex;
+}
+
+.hidden-toggle {
+    display: none;
+}
+
+.sign-up-details-area input:hover {
+    outline-color: rgb(189, 189, 189);
+}
+
+.sign-up-details-area input:focus {
+    box-shadow: 0 2px 9px rgba(79, 131, 163, 0.2);
+    outline-color: #0074bd;
+}
+
+.sign-up-button {
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 2px solid rgb(0, 157, 255);
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0074bd;
+    transition: background-color 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+.sign-up-button:hover {
+    background-color: rgb(230, 245, 255);
+}
+
+.sign-up-button:focus {
+    border: 3px solid #0074bd;
+    background-color: rgb(0, 157, 255);
+    color: white;
+}
+
+.sign-up-button:active {
+    transform: scale(0.95);
+}
+
+.progress-area {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-top,
+.progress-bottom {
+    display: flex;
+    align-items: center;
+}
+
+.progress-border {
+    border-bottom: 2px solid grey;
+    border-bottom-style: dashed;
+    width: 170px;
+    height: 1px;
+    margin: 0 10px;
+}
+
+.progress-top {
+    padding: 0px 40px;
+}
+
+.progress-top p:first-child {
+    border-radius: 20px;
+    border: 2px solid rgb(0, 157, 255);
+    padding: 3px 9px;
+    font-weight: 700;
+    color: #0074bd;
+}
+
+.progress-bottom {
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    height: 25px;
+}
+
+.progress-bottom p {
+    font-size: 13px;
+}
+
+.progress-bottom p:first-child {
+    position: absolute;
+    font-weight: 600;
+    left: 27px;
+}
+
+.progress-bottom p:last-child {
+    position: absolute;
+    right: 0;
+}

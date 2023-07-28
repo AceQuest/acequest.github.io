@@ -1,0 +1,212 @@
+.login-area {
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.login-area-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    max-width: 400px;
+}
+
+.login-area a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.login-title-area {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+}
+
+.login-title {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.login-desc p {
+    margin-bottom: 3px;
+}
+
+.login-desc a {
+    color: #0074bd;
+}
+
+.login-border {
+    margin-top: 20px;
+    border-bottom: 2px solid black;
+    width: 30px;
+}
+
+.login-user-pass-area {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login-user,
+.login-pass {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.login-user-desc,
+.login-pass-desc {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.login-user-pass-area a {
+    font-size: 15px;
+    color: #0074bd;
+    transition: color 0.15s ease-in-out;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.login-user-pass-area input {
+    border-radius: 5px;
+    border: none;
+    height: 35px;
+    padding-left: 10px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    outline: 2px rgb(228, 228, 228) solid;
+    transition: border-color 0.15s ease-in-out, outline-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.login-user-pass-area input:hover {
+    outline-color: rgb(189, 189, 189);
+}
+
+.login-user-pass-area input:focus {
+    box-shadow: 0 2px 9px rgba(79, 131, 163, 0.2);
+    outline-color: #0074bd;
+}
+
+.login-user-pass-area input::placeholder {
+    font-family: 'Montserrat', sans-serif;
+}
+
+input[type="password"] {
+    font-size: 24px;
+    font: caption;
+    font-family: 'pass';
+    font-style: normal;
+}
+
+.password {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.password input {
+    width: 100%;
+}
+
+.password button {
+    position: absolute;
+    border: none;
+    background-color: white;
+    right: 10px;
+}
+
+.visible-toggle {
+    display: flex;
+}
+
+.hidden-toggle {
+    display: none;
+}
+
+.sign-in-button {
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 2px solid rgb(0, 157, 255);
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0074bd;
+    width: 100%;
+    transition: background-color 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+.sign-in-button:hover {
+    background-color: rgb(230, 245, 255);
+}
+
+.sign-in-button:focus {
+    border: 3px solid #0074bd;
+    background-color: rgb(0, 157, 255);
+    color: white;
+}
+
+.sign-in-button:active {
+    transform: scale(0.95);
+}
+
+.g-signin-area {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.g-signin-border {
+    display: flex;
+    align-items: center;
+}
+
+.g-signin-border-left, .g-signin-border-right {
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid rgb(233, 233, 233);
+}
+
+.g-signin-border p {
+    margin: 0px 10px;
+}
+
+#google-button {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    border: 2px solid rgb(230, 230, 230);
+    width: 160px;
+    justify-content: center;
+    border-radius: 10px;
+    height: 45px;
+    margin-top: 30px;
+}
+
+#google-button svg {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.google-logo-text {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+.button-text {
+  font-size: 15px;
+  font-weight: bold;
+  /* Use the Roboto font that is loaded in the <head> */
+  font-family: sans-serif, sans-serif;
+}
