@@ -19,8 +19,7 @@
 				auth2 = gapi.auth2.init({
 					client_id: '261595912-7acv3j309qt58fin9drhtqfmf8ee11eg.apps.googleusercontent.com',
 					cookiepolicy: 'single_host_origin',
-					// Request scopes in addition to 'profile' and 'email'
-					//scope: 'additional_scope'
+					scope: 'additional_scope'
 				});
 				attachSignin(document.getElementById('google-button'));
 			});
@@ -33,11 +32,12 @@
 					document.getElementById('name').innerText = "Signed in: " +
 						googleUser.getBasicProfile().getName();
 				}, function (error) {
-					alert(JSON.stringify(error, undefined, 2));
+					console.log(JSON.stringify(error, undefined, 2));
 				});
 		}
 	</script>
 
+	<link rel="stylesheet" href="styles/general.css">
 	<link rel="stylesheet" href="styles/navigation-bar.css">
 	<link rel="stylesheet" href="styles/login.css">
 </head>
@@ -46,8 +46,8 @@
 	<nav>
 		<div class="nav">
 			<ul>
-				<li><a class="nav-link" href="home.html"><img src="images/AceQuest.png"></a></li>
-				<li><a class="nav-link">Home</a></li>
+				<li><a class="nav-link" href="index.html"><img src="images/Untitled design (4).png"></a></li>
+				<li><a class="nav-link" href="index.html">Home</a></li>
 				<li>
 					<a class="nav-link">Courses</a>
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -59,9 +59,9 @@
 				<li><a class="nav-link">Resources</a></li>
 				<li><a class="nav-link">About</a></li>
 			</ul>
-			<a class="nav-link" href="login.html">Login</a>
+			<a class="nav-link nav-login" href="login.html">Login</a>
 			<button class="hamburger nav-link">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="white"
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="black"
 					stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 					<line x1="4" x2="20" y1="12" y2="12" />
 					<line x1="4" x2="20" y1="6" y2="6" />
@@ -152,7 +152,7 @@
 							<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
 						</svg>
 					</button>
-					<p>AceQuest <span><span class="version">Version #</span></span></p>
+					<p>AceQuest <span><span class=".version">Version #</span></span></p>
 				</div>
 			</div>
 		</div>
@@ -161,7 +161,7 @@
 		<div class="login-area-2">
 			<div class="login-title-area">
 				<p class="login-title">Login</p>
-				<p class="login-desc">Don't have an account? <span><a>Sign Up</a></span></p>
+				<p class="login-desc">Don't have an account? <span><a href="sign-up.html">Sign Up</a></span></p>
 				<div class="login-border"></div>
 			</div>
 			<div class="login-user-pass-area">
@@ -407,7 +407,7 @@
 									d="M75.9,47.3c6.5-0.1,12.9,2.4,17.6,6.9L106.6,41C98.3,33.2,87.3,29,75.9,29.1c-17.4,0-33.2,9.8-41,25.3   l15.2,11.8C53.8,55.3,63.9,47.3,75.9,47.3z" />
 							</g>
 						</svg>
-						<p class="button-text">Google</p>
+						<p class="button-text">Continue With Google</p>
 					</div>
 				</div>
 				<div id="name">dfd</div>

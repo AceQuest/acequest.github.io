@@ -9,6 +9,7 @@
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 	<script src="index.js"></script>
 
+	<link rel="stylesheet" href="styles/general.css">
 	<link rel="stylesheet" href="styles/navigation-bar.css">
 	<link rel="stylesheet" href="styles/home.css">
 </head>
@@ -17,8 +18,8 @@
 	<nav>
 		<div class="nav">
 			<ul>
-				<li><a class="nav-link" href="index.html"><img src="images/AceQuest.png"></a></li>
-				<li><a class="nav-link">Home</a></li>
+				<li><a class="nav-link" href="index.html"><img src="images/Untitled design (4).png"></a></li>
+				<li><a class="nav-link" href="index.html">Home</a></li>
 				<li>
 					<a class="nav-link">Courses</a>
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -30,9 +31,9 @@
 				<li><a class="nav-link">Resources</a></li>
 				<li><a class="nav-link">About</a></li>
 			</ul>
-			<a class="nav-link" href="login.html">Login</a>
+			<a class="nav-link nav-login" href="login.html">Login</a>
 			<button class="hamburger nav-link">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="white"
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="black"
 					stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 					<line x1="4" x2="20" y1="12" y2="12" />
 					<line x1="4" x2="20" y1="6" y2="6" />
@@ -123,7 +124,7 @@
 							<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
 						</svg>
 					</button>
-					<p>AceQuest <span>Version #</span></p>
+					<p>AceQuest <span><span class=".version">Version #</span></span></p>
 				</div>
 			</div>
 		</div>
@@ -135,6 +136,7 @@
 				<p class="hp1-1-desc">Comprehensive question bank to practice
 					various subjects in Grade 10 (including IB
 					level) with detailed solutions to sharpen your skills.</p>
+					<a>Get Started</a>
 			</div>
 			<div class="hp1-image">
 				<img src="images/landing.png">
@@ -146,13 +148,18 @@
 		<div class="hp2-area">
 			<div class="hp2-top">
 				<p class="hp2-top-title">Multiple Answer Formats</p>
-				<p class="hp2-top-desc">Practice different answer formats to simmulate the different questions that come in tests</p>
+				<p class="hp2-top-desc">Practice different answer formats to simmulate the different questions that come in
+					tests</p>
 			</div>
 			<div class="hp2-bottom">
 				<div class="hp2-category">
 					<div class="hp2-left">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#37d439" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy-check">
-							<path d="m12 15 2 2 4-4"/><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+							stroke="#37d439" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+							class="lucide lucide-copy-check">
+							<path d="m12 15 2 2 4-4" />
+							<rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+							<path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
 						</svg>
 						<p class="hp2-c-title">Multiple Choice</p>
 						<p class="hp2-c-desc">among us :></p>
@@ -160,55 +167,138 @@
 					<div class="mc-area">
 						<div class="mc-question-choices">
 							<div class="mc-question-area">
-								<p class="mc-question-n">Question 1.</p>
+								<p class="mc-question-n">Question 1. <span>1/25</span></p>
 								<p class="mc-question">1+1=</p>
 							</div>
-							<ul class="mc-choices">
-								<li>2</li>
-								<li>3</li>
-								<li>231</li>
-								<li>Haerin</li>
-							</ul>
+							<div class="mc-choices">
+								<div class="mc-choice"><button>A</button><p>2</p></div>
+								<div class="mc-choice"><button>B</button><p>4</p></div>
+								<div class="mc-choice"><button>C</button><p>3</p></div>
+								<div class="mc-choice"><button>D</button><p>1</p></div>
+							</div>
 						</div>
-						<div>
-							<div>
-								<div>
+						<div class="mc-right">
+							<div class="mc-difficulty-resources">
+								<div class="mc-difficulty">
 									<p>Difficulty</p>
-									<div>
-										<div></div>
+									<div class="mc-progress-o">
+										<div class="mc-progress-i"></div>
 									</div>
+									<p class="mc-difficulty-rating">Easy</p>
 								</div>
-								<div>
+								<div class="mc-resources">
 									<p>Resources</p>
 									<button>Formula Sheet</button>
 								</div>
 							</div>
-							<div>
-								<button>Submit</button>
-								<button>Solution</button>
+							<div class="mc-submit-solution">
+								<button class="mc-submit">Submit</button>
+								<button class="mc-give-up">Give Up</button>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="hp2-category">
 					<div class="hp2-left">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#37d439" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box-select">
-							<path d="M5 3a2 2 0 0 0-2 2"/><path d="M19 3a2 2 0 0 1 2 2"/><path d="M21 19a2 2 0 0 1-2 2"/><path d="M5 21a2 2 0 0 1-2-2"/><path d="M9 3h1"/><path d="M9 21h1"/><path d="M14 3h1"/><path d="M14 21h1"/><path d="M3 9v1"/><path d="M21 9v1"/><path d="M3 14v1"/><path d="M21 14v1"/>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+							stroke="#37d439" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+							class="lucide lucide-box-select">
+							<path d="M5 3a2 2 0 0 0-2 2" />
+							<path d="M19 3a2 2 0 0 1 2 2" />
+							<path d="M21 19a2 2 0 0 1-2 2" />
+							<path d="M5 21a2 2 0 0 1-2-2" />
+							<path d="M9 3h1" />
+							<path d="M9 21h1" />
+							<path d="M14 3h1" />
+							<path d="M14 21h1" />
+							<path d="M3 9v1" />
+							<path d="M21 9v1" />
+							<path d="M3 14v1" />
+							<path d="M21 14v1" />
 						</svg>
 						<p class="hp2-c-title">Select All That Apply</p>
 						<p class="hp2-c-desc">among us :></p>
 					</div>
-					<div class="hp2-mc-area">aa</div>
+					<div class="mc-area">
+						<div class="mc-question-choices">
+							<div class="mc-question-area">
+								<p class="mc-question-n">Question 1. <span>1/25</span></p>
+								<p class="mc-question">1+1=</p>
+							</div>
+							<div class="mc-choices">
+								<div class="mc-choice"><button>A</button><p>2</p></div>
+								<div class="mc-choice"><button>B</button><p>4</p></div>
+								<div class="mc-choice"><button>C</button><p>3</p></div>
+								<div class="mc-choice"><button>D</button><p>1</p></div>
+							</div>
+						</div>
+						<div class="mc-right">
+							<div class="mc-difficulty-resources">
+								<div class="mc-difficulty">
+									<p>Difficulty</p>
+									<div class="mc-progress-o">
+										<div class="mc-progress-i"></div>
+									</div>
+									<p class="mc-difficulty-rating">Easy</p>
+								</div>
+								<div class="mc-resources">
+									<p>Resources</p>
+									<button>Formula Sheet</button>
+								</div>
+							</div>
+							<div class="mc-submit-solution">
+								<button class="mc-submit">Submit</button>
+								<button class="mc-give-up">Give Up</button>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="hp2-category">
 					<div class="hp2-left">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#37d439" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hash">
-							<line x1="4" x2="20" y1="9" y2="9"/><line x1="4" x2="20" y1="15" y2="15"/><line x1="10" x2="8" y1="3" y2="21"/><line x1="16" x2="14" y1="3" y2="21"/>
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+							stroke="#37d439" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+							class="lucide lucide-hash">
+							<line x1="4" x2="20" y1="9" y2="9" />
+							<line x1="4" x2="20" y1="15" y2="15" />
+							<line x1="10" x2="8" y1="3" y2="21" />
+							<line x1="16" x2="14" y1="3" y2="21" />
 						</svg>
 						<p class="hp2-c-title">Numerical Response</p>
 						<p class="hp2-c-desc">among us :></p>
 					</div>
-					<div class="hp2-mc-area">aa</div>
+					<div class="mc-area">
+						<div class="mc-question-choices">
+							<div class="mc-question-area">
+								<p class="mc-question-n">Question 1. <span>1/25</span></p>
+								<p class="mc-question">1+1=</p>
+							</div>
+							<div class="mc-choices">
+								<div class="mc-choice"><button>A</button><p>2</p></div>
+								<div class="mc-choice"><button>B</button><p>4</p></div>
+								<div class="mc-choice"><button>C</button><p>3</p></div>
+								<div class="mc-choice"><button>D</button><p>1</p></div>
+							</div>
+						</div>
+						<div class="mc-right">
+							<div class="mc-difficulty-resources">
+								<div class="mc-difficulty">
+									<p>Difficulty</p>
+									<div class="mc-progress-o">
+										<div class="mc-progress-i"></div>
+									</div>
+									<p class="mc-difficulty-rating">Easy</p>
+								</div>
+								<div class="mc-resources">
+									<p>Resources</p>
+									<button>Formula Sheet</button>
+								</div>
+							</div>
+							<div class="mc-submit-solution">
+								<button class="mc-submit">Submit</button>
+								<button class="mc-give-up">Give Up</button>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
