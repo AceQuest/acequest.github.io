@@ -1,0 +1,24 @@
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.content-area {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-description {
+    text-align: center;
+}
+
+.content-unit {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-unit-test {
+    display: flex;
+    justify-content: space-between;
+}

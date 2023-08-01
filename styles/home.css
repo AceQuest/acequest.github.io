@@ -1,3 +1,7 @@
+body {
+    height: 300vh;
+}
+
 .hp1 {
     display: flex;
     padding-top: 150px;
@@ -30,11 +34,11 @@
 .hp1-1-title {
     font-size: 60px;
     font-weight: 700;
-    color: rgb(0, 194, 129);
+    color: rgb(0, 157, 255);
 }
 
 .hp1-1-title span {
-    color: rgb(0, 157, 255);
+    color: black;
 }
 
 .hp1-1-desc {
@@ -80,52 +84,114 @@
     justify-content: center;
     background-color: rgb(243, 244, 246);
     padding-top: 100px;
+    height: 500px;
 }
 
 .hp2-area {
     display: flex;
-    flex-direction: column;
-    width: 70%;
-    align-items: center;
-    color: black;
+    width: 80%;
+    justify-content: space-between;
 }
 
 .hp2-top {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-bottom: 30px;
+    justify-content: center;
+    width: 40%;
 }
 
 .hp2-top-title {
     font-weight: 700;
-    font-size: 25px;
+    font-size: 35px;
+    margin-bottom: 5px;
 }
 
 .hp2-top-desc {
-    margin-top: 7px;
+    font-size: 20px;
 }
 
 .hp2-bottom {
     display: flex;
-    flex-direction: column;
-    width: 100%;
 }
 
-.hp2-category {
+.hp2-left, .hp2-right {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-    height: 250px;
+    flex-direction: column;
 }
 
 .hp2-left {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
+    justify-content: end;
+    margin-right: 20px;
 }
 
-.hp2-left svg {
+.hp2-right {
+    justify-content: start;
+}
+
+.hp2-category {
+    width: 250px;
+    height: 150px;
+    background-color: white;
+    border-radius: 10px;
+    border: 3px solid rgb(228, 228, 228);
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.35s ease-in-out;
+}
+
+.hp2-category:first-child {
+    margin-bottom: 20px;
+}
+
+.hp2-left .hp2-category:first-child svg[stroke] {
+    stroke: rgb(0, 157, 255);
+    background-color: rgba(0, 157, 255, 0.192);
+}   
+
+.hp2-left .hp2-category:last-child svg[stroke] {
+    stroke: rgb(0, 194, 129);
+    background-color: rgba(0, 194, 129, 0.192);
+}   
+
+.hp2-right .hp2-category:first-child svg[stroke] {
+    stroke: rgb(255, 0, 0);
+    background-color: rgba(255, 0, 0, 0.192);
+}   
+
+.hp2-right .hp2-category:last-child svg[stroke] {
+    stroke: rgb(162, 0, 255);
+    background-color: rgba(162, 0, 255, 0.192);
+}   
+
+.hp2-left .hp2-category:last-child:hover {
+    border-color: rgb(0, 194, 129);
+}
+
+.hp2-right .hp2-category:first-child:hover {
+    border-color: rgb(255, 0, 0);
+}
+
+.hp2-right .hp2-category:last-child:hover {
+    border-color: rgb(162, 0, 255);
+}
+
+.hp2-left .hp2-category:first-child:hover {
+    border-color: rgb(0, 157, 255);
+}
+
+.hp2-left .hp2-category:last-child:hover {
+    border-color: rgb(0, 194, 129);
+}
+
+.hp2-right .hp2-category:first-child:hover {
+    border-color: rgb(255, 0, 0);
+}
+
+.hp2-right .hp2-category:last-child:hover {
+    border-color: rgb(162, 0, 255);
+}
+
+.hp2-category svg {
     padding: 10px;
     background-color: rgba(0, 194, 129, 0.192);
     border-radius: 10px;

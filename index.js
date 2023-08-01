@@ -208,17 +208,11 @@ $(function () {
             }
         });
 
-        const exampleAssign = { 1: "#ex-1", 2: "#ex-2", 3: "#ex-3" }
-
-        Object.keys(exampleAssign).forEach(function (i) {
-            getQuestion(i - 1, exampleAssign[i]);
-        });
-
     } else {
         $("nav").css("background-color", "#ffffff").css("box-shadow", "0px 2px 10px rgba(0, 0, 0, 0.15)");
 
         let randomQuestion = Math.floor(Math.random() * questions.length);
-        getQuestion(randomQuestion);
+        getQuestion(randomQuestion, ".question-area");
     }
 
     $(".formula-sheet-bottom").html(getFormulaSheet("math_20"));
@@ -248,15 +242,15 @@ $(function () {
     });
 
     $(".question-mc button").on("click", function (button) {
-        $(`.question-area#${button.target.parentElement.parentElement.parentElement.parentElement.id} .question-mc button.active`).each(function (i, obj) {
-            $(`.question-area#${button.target.parentElement.parentElement.parentElement.parentElement.id} .question-mc .${obj.className}`).removeClass("active");
+        $(`.question-mc button.active`).each(function (i, obj) {
+            $(`.question-mc .${obj.className}`).removeClass("active");
         });
 
-        $(`.question-area#${button.target.parentElement.parentElement.parentElement.parentElement.id} .question-mc #${button.target.id}`).toggleClass("active");
+        $(`.question-mc #${button.target.id}`).toggleClass("active");
     });
 
     $(".question-sa button").on("click", function (button) {
-        $(`.question-area#${button.target.parentElement.parentElement.parentElement.parentElement.id} .question-sa #${button.target.id}`).toggleClass("active");
+        $(`.question-sa #${button.target.id}`).toggleClass("active");
     });
 
     $(".formula-sheet-button").on("click", function () {
