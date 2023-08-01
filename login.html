@@ -10,32 +10,8 @@
 
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 	<script src="index.js"></script>
+	<script src="login.js"></script>
 	<script src="https://apis.google.com/js/api:client.js"></script>
-	<script>
-		var googleUser = {};
-		var startApp = function () {
-			gapi.load('auth2', function () {
-				// Retrieve the singleton for the GoogleAuth library and set up the client.
-				auth2 = gapi.auth2.init({
-					client_id: '261595912-7acv3j309qt58fin9drhtqfmf8ee11eg.apps.googleusercontent.com',
-					cookiepolicy: 'single_host_origin',
-					scope: 'additional_scope'
-				});
-				attachSignin(document.getElementById('google-button'));
-			});
-		};
-
-		function attachSignin(element) {
-			console.log(element.id);
-			auth2.attachClickHandler(element, {},
-				function (googleUser) {
-					document.getElementById('name').innerText = "Signed in: " +
-						googleUser.getBasicProfile().getName();
-				}, function (error) {
-					console.log(JSON.stringify(error, undefined, 2));
-				});
-		}
-	</script>
 
 	<link rel="stylesheet" href="styles/general.css">
 	<link rel="stylesheet" href="styles/navigation-bar.css">
@@ -200,7 +176,7 @@
 					<p>or</p>
 					<div class="g-signin-border-right"></div>
 				</div>
-				<div id="google-button" class="customGPlusSignIn">
+				<div id="google-button">
 					<div class="google-logo-text">
 						<?xml version="1.0" ?><svg id="Capa_1" style="enable-background:new 0 0 150 150;" version="1.1"
 							viewBox="0 0 150 150" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
@@ -414,7 +390,7 @@
 			</div>
 		</div>
 	</div>
-	<script>startApp();</script>
+	<script>startAuth();</script>
 </body>
 
 </html>

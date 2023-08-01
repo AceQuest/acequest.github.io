@@ -260,7 +260,7 @@ nav {
     border-color: #0074bd;
 }
 
-.close:hover .close-hover {
+.close:hover .close-hover, .formula-sheet-close:hover .close-hover {
     transform: scale(3.8);
     opacity: 0.2;
 }

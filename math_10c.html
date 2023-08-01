@@ -4,19 +4,13 @@
 <head>
 	<title>AceQuest</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta content="descriptoin" name="description">
 
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 	<script src="index.js"></script>
 
 	<link rel="stylesheet" href="styles/general.css">
 	<link rel="stylesheet" href="styles/navigation-bar.css">
-	<link rel="stylesheet" href="styles/home.css">
-	<link rel="stylesheet" href="styles/questions.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 </head>
 
 <body>
@@ -129,87 +123,49 @@
 							<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
 						</svg>
 					</button>
-					<p>AceQuest <span><span id="version">Version #</span></span></p>
+					<p>AceQuest <span><span class=".version">Version #</span></span></p>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="hp1">
-		<div class="hp1-area">
-			<div class="hp1-text">
-				<p class="hp1-1-title"><span>Unleash Your</span><br> Academic Potential</p>
-				<p class="hp1-1-desc">Comprehensive question bank to practice
-					various subjects in Grade 10 (including IB
-					level) with detailed solutions to sharpen your skills.</p>
-				<a>Get Started</a>
-			</div>
-			<div class="hp1-image">
-				<img src="images/landing.png">
-				<div class="image-glow"></div>
+	<div>
+		<div>
+			<p>Math</p>
+			<p>desc</p>
+		</div>
+		<div>
+			<p>Unit</p>
+			<div>
+				<a>Imperial Measures of Length</a>
+				<a>Surface Areas of Right Pyramids and Right Cones</a>
+				<a>Volumes of Right Pyramids and Right Cones</a>
+				<a>Surface Area and Volume of a Sphere</a>
+				<a>Solving Problems Involving Objects</a>
 			</div>
 		</div>
-	</div>
-	<div class="hp2">
-		<div class="hp2-area">
-			<div class="hp2-top">
-				<p class="hp2-top-title">Multiple Answer Formats</p>
-				<p class="hp2-top-desc">Practice different answer formats to simmulate the different questions that come in
-					tests</p>
-			</div>
-			<div class="hp2-bottom">
-				<div class="hp2-category">
-					<div class="hp2-left">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-							stroke="#37d439" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-							class="lucide lucide-copy-check">
-							<path d="m12 15 2 2 4-4" />
-							<rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
-							<path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
-						</svg>
-						<p class="hp2-c-title">Multiple Choice</p>
-						<p class="hp2-c-desc">among us :></p>
-					</div>
-					<div class="question-area" id="ex-1"></div>
-				</div>
-				<div class="hp2-category">
-					<div class="hp2-left">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-							stroke="#37d439" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-							class="lucide lucide-box-select">
-							<path d="M5 3a2 2 0 0 0-2 2" />
-							<path d="M19 3a2 2 0 0 1 2 2" />
-							<path d="M21 19a2 2 0 0 1-2 2" />
-							<path d="M5 21a2 2 0 0 1-2-2" />
-							<path d="M9 3h1" />
-							<path d="M9 21h1" />
-							<path d="M14 3h1" />
-							<path d="M14 21h1" />
-							<path d="M3 9v1" />
-							<path d="M21 9v1" />
-							<path d="M3 14v1" />
-							<path d="M21 14v1" />
-						</svg>
-						<p class="hp2-c-title">Select All That Apply</p>
-						<p class="hp2-c-desc">among us :></p>
-					</div>
-					<div class="question-area" id="ex-2"></div>
-				</div>
-				<div class="hp2-category">
-					<div class="hp2-left">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-							stroke="#37d439" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-							class="lucide lucide-hash">
-							<line x1="4" x2="20" y1="9" y2="9" />
-							<line x1="4" x2="20" y1="15" y2="15" />
-							<line x1="10" x2="8" y1="3" y2="21" />
-							<line x1="16" x2="14" y1="3" y2="21" />
-						</svg>
-						<p class="hp2-c-title">Numerical Response</p>
-						<p class="hp2-c-desc">among us :></p>
-					</div>
-					<div class="question-area" id="ex-3"></div>
-				</div>
-			</div>
+		<div>
+			<p>Unit</p>
+			<div></div>
+		</div>
+		<div>
+			<p>Unit</p>
+			<div></div>
+		</div>
+		<div>
+			<p>Unit</p>
+			<div></div>
+		</div>
+		<div>
+			<p>Unit</p>
+			<div></div>
+		</div>
+		<div>
+			<p>Unit</p>
+			<div></div>
+		</div>
+		<div>
+			<p>Unit</p>
+			<div></div>
 		</div>
 	</div>
 </body>
