@@ -122,86 +122,96 @@ input[type="password"] {
     right: 10px;
 }
 
-.visible-toggle {
+.visible-toggle, .hidden-toggle {
     display: flex;
 }
 
+.visible-toggle {
+    visibility: visible;
+}
+
 .hidden-toggle {
-    display: none;
+    visibility: hidden;
 }
 
 .sign-in-button {
     margin-top: 20px;
     border-radius: 5px;
     border: 2px solid rgb(0, 157, 255);
-    background-color: white;
+    background-color: rgb(0, 157, 255);
+    color: white;
     font-family: 'Montserrat', sans-serif;
     padding: 10px 30px;
     font-size: 15px;
     font-weight: 600;
-    color: #0074bd;
     width: 100%;
-    transition: background-color 0.15s ease-in-out, transform 0.15s ease-in-out;
-    outline: rgb(255, 255, 255) 1px solid;
-}
-
-.sign-in-button:hover {
-    background-color: rgb(230, 245, 255);
-}
-
-.sign-in-button:focus {
-    outline: 3px solid #0074bd;
-    background-color: rgb(0, 157, 255);
-    color: white;
+    transition: all 0.2s ease-in-out;
+    transform: translateY(0);
+    box-shadow: 0 7px 0px rgba(0, 118, 192, 0.815);
 }
 
 .sign-in-button:active {
-    transform: scale(0.95);
+    transform: translateY(5px);
+    box-shadow: 0 2px 0px rgba(0, 118, 192, 0.815);
 }
 
-.g-signin-area {
+.external-signin-area {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
     width: 100%;
 }
 
-.g-signin-border {
+.external-signin-border {
     display: flex;
     align-items: center;
 }
 
-.g-signin-border-left, .g-signin-border-right {
+.external-signin-border-left, .external-signin-border-right {
     width: 100%;
     height: 1px;
-    border-top: 1px solid rgb(233, 233, 233);
+    border-top: 2px solid rgb(228, 228, 228);
 }
 
-.g-signin-border p {
+.external-signin-border p {
     margin: 0px 10px;
 }
 
-#google-button {
+.external-signin-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+#google-button, #apple-button {
     display: flex;
     cursor: pointer;
     align-items: center;
     border: 2px solid rgb(230, 230, 230);
     /*width: 160px;*/
-    width: 100%;
+    background-color: white;
+    width: 45%;
     justify-content: center;
     border-radius: 10px;
     height: 45px;
     margin-top: 30px;
+    transition: all 0.15s ease-in-out;
+    transform: translateY(0);
+    box-shadow: 0 3px 0px rgb(230, 230, 230);
 }
 
-#google-button svg {
+#google-button:active, #apple-button:active {
+    transform: translateY(3px);
+    box-shadow: 0 0px 0px rgb(230, 230, 230);
+}
+
+#google-button svg, #apple-button svg {
   display: flex;
   align-items: center;
   height: 30px;
   margin-right: 5px;
 }
 
-.google-logo-text {
+.google-logo-text, .apple-logo-text {
     display: flex;
     align-items: center;
     margin-right: 5px;

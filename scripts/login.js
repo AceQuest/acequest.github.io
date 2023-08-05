@@ -18,3 +18,17 @@ function attachSignin(element) {
             console.log(JSON.stringify(error, undefined, 2));
         });
 }
+
+$(function () {
+    $(".hidden-toggle").on("click", function () {
+        $(".hidden-toggle").css("visibility", "hidden");
+        $(".visible-toggle").css("visibility", "visible");
+        $(".password input").attr("type", "password").css("font-family", "pass");
+    });
+
+    $(".visible-toggle").on("click", function () {
+        $(".hidden-toggle").css("visibility", "visible");
+        $(".visible-toggle").css("visibility", "hidden");
+        $(".password input").attr("type", "text").css("font-family", "Montserrat");
+    });
+})

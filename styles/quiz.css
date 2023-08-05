@@ -1,0 +1,328 @@
+.link-tree {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.link-tree a {
+    width: 70%;
+    max-width: 900px;
+    color: rgb(0, 157, 255);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.quiz-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.quiz-nav-area {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 2px solid rgb(228, 228, 228);
+    border-radius: 10px;
+    width: 300px;
+    margin-right: 50px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+    max-width: 300px;
+}
+
+.quiz-nav {
+    padding: 30px;
+}
+
+.quiz-nav-desc {
+    display: flex;
+    flex-direction: column;
+}
+
+.course-name {
+    font-weight: 600;
+}
+
+.unit-name {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+
+.quiz-area {
+    width: 100%;
+}
+
+.question-area {
+    padding: 30px;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgb(228, 228, 228);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+}
+
+.question-top {
+    justify-content: space-between;
+    display: flex;
+}
+
+.question-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.question-details {
+    margin-bottom: 30px;
+}
+
+.question-quiz-name {
+    font-size: 14px;
+    color: #0074bd;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.question-n {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.question {
+    font-size: 30px;
+}
+
+.question-choices {
+    display: flex;
+    flex-direction: column;
+}
+
+.question-choice {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.question-choice:last-child {
+    margin: 0;
+}
+
+.question-choice button {
+    border: none;
+    margin-right: 25px;
+    border-radius: 10px;
+    height: 30px;
+    width: 30px;
+    font-weight: 600;
+    font-family: 'Montserrat';
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.question-choice button:hover {
+    color: white;
+    background-color: rgb(0, 157, 255);
+}
+
+.question-choice button.active {
+    outline: 3px solid #0074bd;
+}
+
+.question-response-area {
+    margin-top: 10px;
+}
+
+.question-response-area input {
+    border-radius: 5px;
+    border: none;
+    height: 35px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 10px;
+    outline: 2px rgb(228, 228, 228) solid;
+    transition: border-color 0.15s ease-in-out, outline-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.question-response-area input:hover {
+    outline-color: rgb(189, 189, 189);
+}
+
+.question-response-area input:focus {
+    box-shadow: 0 2px 9px rgba(79, 131, 163, 0.2);
+    outline-color: #0074bd;
+}
+
+.question-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.question-difficulty {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.question-difficulty-title {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.question-difficulty-o {
+    width: 250px;
+    height: 15px;
+    border: 2px solid rgb(228, 228, 228);
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 5px;
+}
+
+
+.question-difficulty-i {
+    height: 15px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    width: 1px;
+    background-color: black;
+    transition: background-color 10s linear, 1s width cubic-bezier(0,-0.01,1,-0.01);
+}
+
+.question-difficulty-percentage {
+    margin-left: 8px;
+    font-size: 12px;
+    color: white;
+    font-weight: 600;
+}
+
+.question-difficulty-rating {
+    font-weight: 600;
+}
+
+
+.question-resources {
+    display: flex;
+    flex-direction: column;
+}
+
+.question-resources p {
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.formula-sheet-button {
+    text-decoration: underline;
+    border: none;
+    text-align: left;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.question-bottom {
+    align-self: flex-end;
+    display: flex;
+}
+
+.question-bottom button {
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 2px solid rgb(0, 157, 255);
+    background-color: rgb(0, 157, 255);
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    width: 100%;
+    transition: background-color 0.15s ease-in-out, transform 0.15s ease-in-out;
+    outline: rgb(255, 255, 255) 1px solid;
+}
+
+.question-bottom button:focus {
+    outline: 3px solid #0074bd;
+    background-color: rgb(0, 157, 255);
+    color: white;
+}
+
+.question-bottom button:active {
+    transform: scale(0.95);
+}
+
+
+.formula-sheet {
+    display: none;
+    width: 550px;
+    height: 675px;
+    position: absolute;
+    top: 250px;
+    left: 250px;
+    background-color: white;
+    border: 2px solid rgb(228, 228, 228);
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.formula-sheet-top-border {
+    background: white;
+    background-image: radial-gradient(rgb(228,228,228) 1px, transparent 0);
+    background-size: 6px 6px;
+    background-position: -14px -14px;
+    height: 15px;
+}
+
+.formula-sheet button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 0;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.formula-sheet .close-hover {
+    top: 10px;
+    right: 10px;
+    display: flex;
+    position: absolute;
+}
+
+.formula-sheet-top {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.formula-sheet-top p:first-child {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.formula-sheet-top p:last-child {
+    font-style: italic;
+}
+
+.formula-sheet-bottom {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    padding: 20px;
+}
+
+.formula-sheet-course p {
+    font-weight: 600;
+}
+
+.formula-sheet-course .katex {
+    line-height: 25px;
+    font-size: 18px;
+}
