@@ -20,9 +20,7 @@ function animateValue(obj, start, end, duration) {
 $(function () {
     $("#version").replaceWith(version);
 
-    visitCount = Number(visitCount) + 1;
-    console.log(visitCount);
-    localStorage.setItem("page_view", visitCount);
+    localStorage.setItem("page_view", Number(visitCount) + 1);
 
     var scroll_pos;
     var animated = false;
@@ -36,15 +34,9 @@ $(function () {
             $("nav").removeClass("active");
         }
 
-        if (scroll_pos > 350) {
-            $('.to-be-animate').each(function (i, obj) {
-                $(`.${obj.classList[0]}`).addClass("animate");
-            });
-        }
-
-        if (scroll_pos > 700) {
+        if (scroll_pos > 600) {
             if (!animated) {
-                animateValue(".hp3-1-count", 0, visitCount, 5000);
+                animateValue(".hp3-1-count", 0, visitCount+10000, 5000);
                 animateValue(".hp3-2-count", 0, 3, 5000);
                 animateValue(".hp3-3-count", 0, 0, 5000);
                 animated = true;

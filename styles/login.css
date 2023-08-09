@@ -1,5 +1,23 @@
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close-wrapper {
+    width: 70%;
+    max-width: 600px;
+    height: 250px;
+}
+
+.close {
+    top: 50%;
+    left: 0%;
+}
+
 .login-area {
-    padding-top: 200px;
     display: flex;
     justify-content: center;
     width: 100%;

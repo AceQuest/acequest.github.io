@@ -1,43 +1,58 @@
 .nav-wrapper {
     display: flex;
     background-color: white;
-    width: 30%;
+    width: 7%;
     max-width: 250px;
     height: 100vh;
 }
 
 .nav-area {
-    padding: 20px;
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    border-right: 3px solid grey;
+    padding-top: 50px;
 }
 
 .nav-img img {
-    height: 90px;
-    margin-right: 20px;
+    height: 35px;
+    margin-bottom: 20px;
 }
 
 .nav-link {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    padding: 15px 10px;
+    padding: 15px;
     font-weight: 600;
     border-radius: 10px;
     transition: all 0.15s ease-in-out;
     color: black;
+    width: fit-content;
+    justify-content: center;
+    position: relative;
 }
 
 .nav-link:hover {
     background-color: rgb(228, 228, 228);
 }
 
-.nav-link.active {
-    border: 2px solid var(--blue);
+.nav-link.current {
+    border: 3px solid var(--blue);
     background-color: rgb(182, 237, 255);
 }
 
-.nav-link svg {
-    margin-right: 20px;
+.nav-link p {
+    display: none;
+}
+
+.nav-link:hover p {
+    display: flex;
+    position: absolute;
+    left: 90px;
+    background-color: rgba(0, 0, 0, 0.801);
+    color: white;
+    padding: 5px 8px;
+    border-radius: 5px;
 }

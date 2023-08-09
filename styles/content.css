@@ -5,7 +5,7 @@
 .content-wrapper {
     display: flex;
     width: 100%;
-    background-color: rgb(228, 228, 228);
+    background-color: rgb(245, 245, 245);
     justify-content: center;
 }
 
@@ -17,25 +17,6 @@
     flex-direction: column;
 }
 
-.course-button {
-    background-color: inherit;
-    border: none;
-    border-radius: 10px;
-    transition: all 0.2s ease-in-out;
-    color: white;
-    font-weight: 600;
-    transform: translateY(0);
-    box-shadow: 0 7px 0px inherit;
-    padding: 10px 25px;
-}
-
-/*rgb(228, 228, 228)*/
-
-.course-button:active {
-    transform: translateY(5px);
-    box-shadow: 0 2px 0px inherit;
-}
-
 .link-tree-area {
     display: flex;
     height: 20%;
@@ -43,14 +24,18 @@
 }
 
 .link-tree {
+    background-color: var(--blue);
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 7px 0px var(--blue-shadow);
+    padding: 13px 17px;
     display: flex;
     align-items: center;
-    width: fit-content;
-    background-color: var(--blue);
-    box-shadow: 0 7px 0px var(--blue-shadow);
+    justify-content: center;
 }
 
 .link-tree:active {
+    transform: translateY(5px);
     box-shadow: 0 2px 0px var(--blue-shadow);
 }
 
@@ -83,14 +68,15 @@
     display: flex;
     justify-content: space-between;
     background-color: inherit;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
     align-items: center;
     padding: 10px 20px;
+    color: white;
+    width: 70%;
 }
 
 .unit-desc p:first-child {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 25px;
 }
 
@@ -126,7 +112,7 @@
 .unit-progress-s {
     width: 85%;
     background-color: rgb(176, 159, 233);
-    height: 30%;
+    height: 40%;
     margin-top: 4px;
     border-radius: 10px;
 }
@@ -134,16 +120,128 @@
 .unit-content {
     display: flex;
     flex-direction: column;
-    background-color: white;
     padding: 10px 20px 15px 20px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
 }
 
 .unit-quizzes {
     display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
-    row-gap: 10px;
+    grid-template-rows: 0.5fr 0.5fr;
+    grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+    row-gap: 20px;
+    position: relative;
+    justify-items: center;
+}
+
+.quiz-desc {
+    display: none;
+}
+
+.quiz-link {
+    background-color: var(--blue);
+    border-radius: 40px;
+    color: white;
+    box-shadow: 0 7px 0px var(--blue-shadow);
+    padding: 13px 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz-link:active {
+    transform: translateY(5px);
+    box-shadow: 0 2px 0px var(--blue-shadow);
+}
+
+.quiz-link p {
+    font-size: 18px;
+}
+
+.quiz-button-area {
+    position: relative;
+}
+
+/*
+<div class="quiz-desc">
+    <p class="quiz-title">Quadratics Unit Test</p>
+    <p class="quiz-contents"></p>
+    <a class="button">Start Quiz</a>
+</div>
+*/
+@keyframes quiz-desc-animate {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+.quiz-desc {
+    position: absolute;
+    top: 85px;
+    left: -78px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding: 20px;
+    background-color: var(--blue);
+    z-index: 100;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+    color: white;
+    transform: scale(0);
+    visibility: hidden;
+}
+
+.quiz-desc::before {
+    background-color: var(--blue);
+    position: absolute;
+    top: -14px;
+    left: 45%;
+    content: '';
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+}
+
+.quiz-desc.active {
+    visibility: visible;
+    transform: scale(1);
+}
+
+.quiz-title {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.quiz-desc a {
+    background-color: white;
+    box-shadow: 0 7px 0px rgb(228, 228, 228);
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--blue);
+    padding: 10px 0px;
+    margin-top: 20px;
+}
+
+.quiz-desc a:active {
+    box-shadow: 0 2px 0px rgb(228, 228, 228);
+}
+
+.unit-quizzes .quiz-not-started {
+    width: 30px;
+    height: 30px;
+}
+
+.quiz-finished {
+    display: none;
 }
 
 .unit-border-bottom {

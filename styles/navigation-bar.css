@@ -3,7 +3,7 @@ nav {
     display: flex;
     justify-content: center;
     height: 60px;
-    background-color: #add8e6;
+    background-color: lightskyblue;
     transition: all 0.15s ease-in-out;
     z-index: 30;
     color: black;
@@ -93,7 +93,7 @@ nav.active {
     top: 60px;
     left: 270px;
     padding: 20px;
-    justify-content: center;
+    justify-content: space-between;
     z-index: 10000;
     border-radius: 10px;
     transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out;
@@ -116,7 +116,6 @@ nav.active {
 .nav-course-expand-col {
     display: flex;
     flex-direction: column;
-    border-right: 2px solid rgb(228, 228, 228);
     width: 150px;
     align-items: center;
     
@@ -289,6 +288,7 @@ nav.active {
     color: black;
     text-decoration: none;
     cursor: pointer;
+    font-weight: 600;
 }
 
 .min-nav-link:hover {

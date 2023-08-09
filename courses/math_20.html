@@ -5,13 +5,16 @@
 	<link rel="stylesheet" href="/styles/general.css">
 	<link rel="stylesheet" href="/styles/navigation-bar-2.css">
 	<link rel="stylesheet" href="/styles/content.css">
+
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+	<script src="/scripts/content.js"></script>
 </head>
 
 <body>
 	<div class="wrapper">
 		<div class="nav-wrapper">
 			<div class="nav-area">
-				<a class="nav-img" href="index.html"><img src="/images/Untitled design (4).png"></a>
+				<a class="nav-img" href="index.html"><img src="/images/AceQuest (9).png"></a>
 				<a class="nav-link" href="index.html">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -20,7 +23,7 @@
 					</svg>
 					<p>Dashboard</p>
 				</a>
-				<a class="nav-link active">
+				<a class="nav-link current">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
 						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
 						class="lucide lucide-dumbbell">
@@ -56,7 +59,7 @@
 		<div class="content-wrapper">
 			<div class="content-area">
 				<div class="link-tree-area">
-					<a class="link-tree course-button" href="/courses.html">
+					<a class="link-tree button" href="/courses.html">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
 							stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
 							class="lucide lucide-move-left">
@@ -72,10 +75,10 @@
 						<p>dfesa</p>
 					</div>
 					<div class="course-content">
-						<div class="course-unit unit-1">
+						<div class="course-unit unit-1 Quadratic Functions">
 							<div class="unit-header">
 								<div class="unit-desc">
-									<p>Unit 1: Quadratics</p>
+									<p>Unit 1: Quadratic Functions</p>
 									<p>ddfsa</p>
 								</div>
 								<div class="unit-progress-o">
@@ -87,25 +90,118 @@
 							</div>
 							<div class="unit-content">
 								<div class="unit-quizzes">
-									<a href="quiz.html">Review from Grade 10</a>
-									<a>Quadratic Functions and Quadratic Equations</a>
-									<a>Properties of Quadratics</a>
-									<a>Completing the Square and The Quadratic Formula</a>
-									<a>Applications of Quadratics</a>
-									<a>Sum & Product of Roots</a>
-									<a>Complex Roots and Equations</a>
-								</div>
-								<div class="unit-border-bottom"></div>
-								<div class="unit-test">
-									<p>Unit Test</p>
-									<a class="course-button">Start Test</a>
+									<div class="quiz-button-area Quiz-1">
+										<button class="quiz-link button">
+											<p>Quiz #1</p>
+											<svg class="quiz-finished" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+												stroke-linejoin="round">
+												<polyline points="20 6 9 17 4 12" />
+											</svg>
+										</button>
+										<div class="quiz-desc">
+											<p class="quiz-title"></p>
+											<p class="quiz-contents"></p>
+											<a class="button">Start Quiz</a>
+										</div>
+									</div>
+									<div class="quiz-button-area Quiz-2">
+										<button class="quiz-link button">
+											<p>Quiz #2</p>
+											<svg class="quiz-finished" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+												stroke-linejoin="round">
+												<polyline points="20 6 9 17 4 12" />
+											</svg>
+										</button>
+										<div class="quiz-desc">
+											<p class="quiz-title"></p>
+											<p class="quiz-contents"></p>
+											<a class="button">Start Quiz</a>
+										</div>
+									</div>
+									<div class="quiz-button-area Quiz-3">
+										<button class="quiz-link button">
+											<p>Quiz #3</p>
+											<svg class="quiz-finished" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+												stroke-linejoin="round">
+												<polyline points="20 6 9 17 4 12" />
+											</svg>
+										</button>
+										<div class="quiz-desc">
+											<p class="quiz-title"></p>
+											<p class="quiz-contents"></p>
+											<a class="button">Start Quiz</a>
+										</div>
+									</div>
+									<div class="quiz-button-area Quiz-4">
+										<button class="quiz-link button">
+											<p>Quiz #4</p>
+											<svg class="quiz-finished" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+												stroke-linejoin="round">
+												<polyline points="20 6 9 17 4 12" />
+											</svg>
+										</button>
+										<div class="quiz-desc">
+											<p class="quiz-title"></p>
+											<p class="quiz-contents"></p>
+											<a class="button">Start Quiz</a>
+										</div>
+									</div>
+									<div class="quiz-button-area Quiz-5">
+										<button class="quiz-link button">
+											<p>Quiz #5</p>
+											<svg class="quiz-finished" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+												stroke-linejoin="round">
+												<polyline points="20 6 9 17 4 12" />
+											</svg>
+										</button>
+										<div class="quiz-desc">
+											<p class="quiz-title"></p>
+											<p class="quiz-contents"></p>
+											<a class="button">Start Quiz</a>
+										</div>
+									</div>
+									<div class="quiz-button-area Quiz-6">
+										<button class="quiz-link button">
+											<p>Quiz #6</p>
+											<svg class="quiz-finished" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+												stroke-linejoin="round">
+												<polyline points="20 6 9 17 4 12" />
+											</svg>
+										</button>
+										<div class="quiz-desc">
+											<p class="quiz-title"></p>
+											<p class="quiz-contents"></p>
+											<a class="button">Start Quiz</a>
+										</div>
+									</div>
+									<div class="quiz-button-area Quiz-7">
+										<button class="quiz-link button">
+											<p>Unit Test</p>
+											<svg class="quiz-finished" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+												stroke-linejoin="round">
+												<polyline points="20 6 9 17 4 12" />
+											</svg>
+										</button>
+										<div class="quiz-desc">
+											<p class="quiz-title"></p>
+											<p class="quiz-contents"></p>
+											<a class="button">Start Unit Test</a>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="course-unit unit-2">
+						<div class="course-unit unit-2 Polynomial-and-Absolute-Values">
 							<div class="unit-header">
 								<div class="unit-desc">
-									<p>Unit 1: Quadratics</p>
+									<p>Unit 2: Polynomial and Absolute Values</p>
 									<p>ddfsa</p>
 								</div>
 								<div class="unit-progress-o">
@@ -117,17 +213,111 @@
 							</div>
 							<div class="unit-content">
 								<div class="unit-quizzes">
-									<a>Review from Grade 10</a>
-									<a>Classifying Systems and Applications</a>
-									<a>Systems with Literal Coefficients</a>
-									<a>Non-Linear Systems</a>
-									<a>Linear Inequalities</a>
-									<a>Quadratic Inequalities</a>
-								</div>
-								<div class="unit-border-bottom"></div>
-								<div class="unit-test">
-									<p>Unit Test</p>
-									<a class="course-button">Start Test</a>
+									<div class="quiz-button-area Quiz-1">
+										<button class="quiz-link button">
+											<p>Quiz #1</p>
+											<svg class="quiz-finished" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+												stroke-linejoin="round">
+												<polyline points="20 6 9 17 4 12" />
+											</svg>
+										</button>
+										<div class="quiz-desc">
+											<p class="quiz-title"></p>
+											<p class="quiz-contents"></p>
+											<a class="button">Start Quiz</a>
+										</div>
+									</div>
+									<div class="quiz-button-area Quiz-2">
+										<button class="quiz-link button">
+											<p>Quiz #2</p>
+											<svg class="quiz-finished" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+												stroke-linejoin="round">
+												<polyline points="20 6 9 17 4 12" />
+											</svg>
+										</button>
+										<div class="quiz-desc">
+											<p class="quiz-title"></p>
+											<p class="quiz-contents"></p>
+											<a class="button">Start Quiz</a>
+										</div>
+									</div>
+									<div class="quiz-button-area Quiz-3">
+										<button class="quiz-link button">
+											<p>Quiz #3</p>
+											<svg class="quiz-finished" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+												stroke-linejoin="round">
+												<polyline points="20 6 9 17 4 12" />
+											</svg>
+										</button>
+										<div class="quiz-desc">
+											<p class="quiz-title"></p>
+											<p class="quiz-contents"></p>
+											<a class="button">Start Quiz</a>
+										</div>
+									</div>
+									<div class="quiz-button-area Quiz-4">
+										<button class="quiz-link button">
+											<p>Quiz #4</p>
+											<svg class="quiz-finished" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+												stroke-linejoin="round">
+												<polyline points="20 6 9 17 4 12" />
+											</svg>
+										</button>
+										<div class="quiz-desc">
+											<p class="quiz-title"></p>
+											<p class="quiz-contents"></p>
+											<a class="button">Start Quiz</a>
+										</div>
+									</div>
+									<div class="quiz-button-area Quiz-5">
+										<button class="quiz-link button">
+											<p>Quiz #5</p>
+											<svg class="quiz-finished" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+												stroke-linejoin="round">
+												<polyline points="20 6 9 17 4 12" />
+											</svg>
+										</button>
+										<div class="quiz-desc">
+											<p class="quiz-title"></p>
+											<p class="quiz-contents"></p>
+											<a class="button">Start Quiz</a>
+										</div>
+									</div>
+									<div class="quiz-button-area Quiz-6">
+										<button class="quiz-link button">
+											<p>Quiz #6</p>
+											<svg class="quiz-finished" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+												stroke-linejoin="round">
+												<polyline points="20 6 9 17 4 12" />
+											</svg>
+										</button>
+										<div class="quiz-desc">
+											<p class="quiz-title"></p>
+											<p class="quiz-contents"></p>
+											<a class="button">Start Quiz</a>
+										</div>
+									</div>
+									<div class="quiz-button-area Quiz-7">
+										<button class="quiz-link button">
+											<p>Unit Test</p>
+											<svg class="quiz-finished" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+												viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+												stroke-linejoin="round">
+												<polyline points="20 6 9 17 4 12" />
+											</svg>
+										</button>
+										<div class="quiz-desc">
+											<p class="quiz-title"></p>
+											<p class="quiz-contents"></p>
+											<a class="button">Start Unit Test</a>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>

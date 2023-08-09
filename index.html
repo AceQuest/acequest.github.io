@@ -4,15 +4,16 @@
 <head>
 	<title>AceQuest</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
 	<meta content="descriptoin" name="description">
 
     <link rel="stylesheet" href="styles/general.css">
 	<link rel="stylesheet" href="styles/navigation-bar.css">
 	<link rel="stylesheet" href="styles/home.css">
 
+    <script src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-	<script src="scripts/index.js"></script>
+    <script src="scripts/index.js"></script>
 </head>
 
 <body>
@@ -33,12 +34,12 @@
 						<div class="nav-course-expand-col">
 							<p>Grade 10</p>
 							<a>Math 10C</a>
-							<a>Science 10</a>
+							<a>Science 10-1</a>
 						</div>
 						<div class="nav-course-expand-col">
 							<p>Grade 11</p>
 							<a href="math_20ib.html">Math 20</a>
-							<a>Physics 20</a>
+							<a>Physics 20-1</a>
 						</div>
 						<div class="nav-course-expand-col">
 							<p>IB</p>
@@ -151,24 +152,19 @@
 	</div>
 	<div class="hp1">
 		<div class="hp1-area">
-			<div class="hp1-text">
-				<p class="hp1-1-title"><span>Unleash Your</span><br> Academic Potential</p>
-				<p class="hp1-1-desc">Comprehensive question bank to practice
-					various subjects in Grade 10 (including IB
-					level) with detailed solutions to sharpen your skills.</p>
-				<a>Get Started</a>
-			</div>
-			<div class="hp1-image">
-				<img src="images/landing.png">
-				<div class="image-glow"></div>
-			</div>
-		</div>
+      <div class="hp1-left">
+        <p class="hp1-title">Unleash Your<br><span>Academic Potential</span></p>
+        <p class="hp1-desc">Free comprehensive question bank to practice various subjects in Grade 10 (including IB level) to sharpen your skills.</p>
+        <a class="hp1-get-started button">Get Started</a>
+      </div>
+      <img class="hp1-image" src="images/AceQuest (11) (2).png">
+    </div>
 	</div>
 	<div class="hp2">
 		<div class="hp2-area">
 			<div class="hp2-top">
-				<p class="hp2-top-title to-be-animate">About AceQuest</p>
-				<p class="hp2-top-desc to-be-animate">Started on May 2023 with a team of two highschool students</p>
+				<p class="hp2-top-title to-be-animate">Why Practice at AceQuest</p>
+				<p class="hp2-top-desc to-be-animate">Here are some features that we offer</p>
 			</div>
 			<div class="hp2-bottom">
 				<div class="hp2-left">
@@ -198,21 +194,88 @@
 			</div>
 		</div>
 	</div>
-	<div class="hp3">
-        <div class="hp3-area">
-            <div class="hp3-1">
-                <p class="hp3-1-count"></p>
-                <p>Total Visitors</p>
-            </div>
-            <div class="hp3-2">
-                <p class="hp3-2-count"></p>
-                <p>Unique Visitors</p>
-            </div>
-            <div class="hp3-3">
-                <p class="hp3-3-count"></p>
-                <p>Registered Users</p>
-            </div>
-        </div>
+	<div class="hp3-wrapper">
+		<div class="hp3-area">
+			<p class="hp3-title">Popular Courses</p>
+			<div class="hp3-courses">
+				<div class="hp3-course-1">
+					<div class="hp3-course-header">
+						<svg class="hp3-course-image" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg>
+						<div class="hp3-course-title">
+							<p class="hp3-course-title-tag">Grade 11</p>
+							<p class="hp3-course-title-text">Mathematics 20-1</p>
+						</div>
+					</div>
+					<p class="hp3-course-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+						molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+						numquam.</p>
+					<div class="hp3-course-info">
+						<div class="hp3-course-info-top">
+							<div class="hp3-course-info-questions">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shapes"><path d="M8.3 10a.7.7 0 0 1-.626-1.079L11.4 3a.7.7 0 0 1 1.198-.043L16.3 8.9a.7.7 0 0 1-.572 1.1Z"/><rect x="3" y="14" width="7" height="7" rx="1"/><circle cx="17.5" cy="17.5" r="3.5"/></svg>
+								<p>353</p>
+							</div>
+							<div class="hp3-course-info-rating">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+								<p>3.5</p>
+							</div>
+						</div>
+						<a class="hp3-course-info-bottom button">Start Now</a>
+					</div>
+				</div>
+				<div class="hp3-course-2">
+					<div class="hp3-course-header">
+						<svg class="hp3-course-image" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><path d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z"/><path d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z"/></svg>
+						<div class="hp3-course-title">
+							<p class="hp3-course-title-tag">IB</p>
+							<p class="hp3-course-title-text">Physics 25 IB</p>
+						</div>
+					</div>
+					<p class="hp3-course-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+						molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+						numquam.</p>
+					<div class="hp3-course-info">
+						<div class="hp3-course-info-top">
+							<div class="hp3-course-info-questions">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shapes"><path d="M8.3 10a.7.7 0 0 1-.626-1.079L11.4 3a.7.7 0 0 1 1.198-.043L16.3 8.9a.7.7 0 0 1-.572 1.1Z"/><rect x="3" y="14" width="7" height="7" rx="1"/><circle cx="17.5" cy="17.5" r="3.5"/></svg>
+								<p>353</p>
+							</div>
+							<div class="hp3-course-info-rating">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+								<p>3.5</p>
+							</div>
+						</div>
+						<a class="hp3-course-info-bottom button">Start Now</a>
+					</div>
+				</div>
+				<div class="hp3-course-3">
+					<div class="hp3-course-header">
+						<svg class="hp3-course-image" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg>
+						<div class="hp3-course-title">
+							<p class="hp3-course-title-tag">Grade 10</p>
+							<p class="hp3-course-title-text">Science 10-1</p>
+						</div>
+					</div>
+					<p class="hp3-course-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+						molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+						numquam.</p>
+					<div class="hp3-course-info">
+						<div class="hp3-course-info-top">
+							<div class="hp3-course-info-questions">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shapes"><path d="M8.3 10a.7.7 0 0 1-.626-1.079L11.4 3a.7.7 0 0 1 1.198-.043L16.3 8.9a.7.7 0 0 1-.572 1.1Z"/><rect x="3" y="14" width="7" height="7" rx="1"/><circle cx="17.5" cy="17.5" r="3.5"/></svg>
+								<p>353</p>
+							</div>
+							<div class="hp3-course-info-rating">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+								<p>3.5</p>
+							</div>
+						</div>
+						<a class="hp3-course-info-bottom button">Start Now</a>
+					</div>
+				</div>
+			</div>
+			<a class="hp3-view-all button">View All Courses</a>
+		</div>
 	</div>
 </body>
 
