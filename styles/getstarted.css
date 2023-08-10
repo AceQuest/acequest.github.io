@@ -1,0 +1,101 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.area {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 70%;
+    max-width: 700px;
+}
+
+.progress-o {
+    width: 100%;
+    background-color: white;
+    height: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    justify-items: flex-start;
+}
+
+.progress-i {
+    width: 0%;
+    background-color: var(--purple);
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: width 1s ease-in-out;
+}
+
+
+.progress-s {
+    width: 100%;
+    margin: 0px 15px;
+    background-color: rgb(176, 159, 233);
+    height: 40%;
+    margin-top: 4px;
+    border-radius: 10px;
+}
+
+.input-stage-1, .input-stage-2, .input-stage-3, .input-stage-4 {
+    height: 100%;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.input-stage-1.active, .input-stage-2.active, .input-stage-3.active, .input-stage-4.active {
+    opacity: 1;
+}
+
+.input-title {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.input-text {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.input-desc {
+    font-size: 15px;
+}
+
+.input-stage-buttons {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    column-gap: 10px;
+    row-gap: 18px;
+}
+
+.button {
+    background-color: var(--purple);
+    border-radius: 10px;
+    width: 100%;
+    padding: 12px 0px;
+    color: white;
+    box-shadow: 0 7px 0px var(--purple-shadow);
+}
+
+.button:active {
+    box-shadow: 0 2px 0px var(--purple-shadow);
+}
+
+.input-stage-1, .input-stage-2, .input-stage-3, .input-stage-4 {
+    display: none;
+}

@@ -16,12 +16,10 @@
 
 html, body {
     overflow-x:hidden 
-  } 
+} 
 
 body {
     background-color: rgb(243, 244, 246);
-    position: absolute;
-    width: 100vw;
 }
 
 a,
@@ -54,19 +52,15 @@ button {
 }
 
 .close {
-    margin-top: 7px;
-    margin-right: 12px;
     display: flex;
-    height: 42px;
-    width: 42px;
+    height: inherit;
+    width: inherit;
     padding: 5px;
-    align-self: flex-end;
     justify-content: center;
     background-color: transparent;
     border: none;
     align-items: center;
     position: relative;
-    margin-bottom: 20px;
 }
 
 .close-hover {

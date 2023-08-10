@@ -1,14 +1,18 @@
+.sign-up-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+}
+
 .sign-up-area {
-    padding-top: 120px;
+    width: 70%;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-}
-
-.sign-up-area a {
-    cursor: pointer;
-    text-decoration: none;
+    justify-content: space-between;
 }
 
 .sign-up-title-area {
@@ -20,7 +24,7 @@
 }
 
 .sign-up-title {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 30px;
     margin-bottom: 15px;
 }
@@ -45,6 +49,7 @@
     flex-direction: column;
     width: 70%;
     max-width: 400px;
+    height: 100%;
 }
 
 .sign-up-details-1,
@@ -117,24 +122,16 @@ input[type="password"] {
 }
 
 .sign-up-button {
-    margin-top: 20px;
-    border-radius: 5px;
-    border: 2px solid rgb(0, 157, 255);
-    background-color: rgb(0, 157, 255);
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    padding: 10px 30px;
-    font-size: 15px;
-    font-weight: 600;
+    background-color: var(--purple);
+    border-radius: 10px;
     width: 100%;
-    transition: all 0.2s ease-in-out;
-    transform: translateY(0);
-    box-shadow: 0 7px 0px rgb(0, 102, 165);
+    padding: 12px 0px;
+    color: white;
+    box-shadow: 0 7px 0px var(--purple-shadow);
 }
 
 .sign-up-button:active {
-    transform: translateY(3px);
-    box-shadow: 0 2px 0px rgb(0, 157, 255);
+    box-shadow: 0 2px 0px var(--purple-shadow);
 }
 
 .progress-area {

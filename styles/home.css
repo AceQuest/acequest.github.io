@@ -1,3 +1,29 @@
+body {
+    background-color: lightskyblue;
+}
+
+.back-to-top {
+    background-color: var(--purple);
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 7px 0px var(--purple-shadow);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 50px;
+    z-index: 100;
+    padding: 10px;
+    bottom: 60px;
+    right: 60px;
+    height: fit-content;
+}
+
+.back-to-top:active {
+    box-shadow: 0 2px 0px var(--purple-shadow);
+}
+
 .hp1 {
     display: flex;
     justify-content: center;
@@ -44,7 +70,7 @@
 }
 
 .hp1-get-started:active {
-    box-shadow: 0 2px 0px var(--blue-shadow);
+    box-shadow: 0 2px 0px var(--purple-shadow);
 }
 
 .hp1-image {
@@ -55,7 +81,7 @@
     display: flex;
     justify-content: center;
     background-color: rgb(243, 244, 246);
-    margin-top: 100px;
+    padding-top: 100px;
     height: 500px;
 }
 
@@ -203,7 +229,8 @@
 .hp3-wrapper {
 	display: flex;
 	justify-content: center;
-	margin-top: 100px;
+	padding: 100px 0px;
+    background-color: rgb(243, 244, 246);
 }
 
 .hp3-area {
@@ -271,7 +298,6 @@
 }
 
 .hp3-course-2 .hp3-course-title-tag {
-	padding: 5px 10px;
 	background-color: rgb(139, 108, 239, 0.2);
 }
 
@@ -292,7 +318,7 @@
 
 .hp3-course-title-tag {
 	width: fit-content;
-	padding: 5px;
+	padding: 5px 10px;
 	font-weight: 600;
 	font-size: 13px;
 	border-radius: 20px;
@@ -317,17 +343,16 @@
 .hp3-course-info-top {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 
 .hp3-course-info-questions, .hp3-course-info-rating {
-	display: flex;
-	border-radius: 10px;
-	padding: 5px 7px;
-	align-items: center;
-	height: fit-content;
-	font-size: 13px;
+    display: flex;
+	width: fit-content;
+	padding: 5px 10px;
 	font-weight: 600;
+	font-size: 13px;
+	border-radius: 20px;
 }
 
 .hp3-course-info-questions {
@@ -375,7 +400,102 @@
     box-shadow: 0 2px 0px var(--purple-shadow);
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
 
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-title {
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.footer-subscribe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.footer-subscribe-input {
+    margin-top: 7px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+    height: 35px;
+    width: 300px;
+    padding-left: 10px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    outline: 2px rgb(228, 228, 228) solid;
+    transition: border-color 0.15s ease-in-out, outline-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.footer-subscribe-input:hover {
+    outline-color: rgb(189, 189, 189);
+}
+
+.footer-subscribe-input:focus {
+    box-shadow: 0 2px 9px rgba(79, 131, 163, 0.2);
+    outline-color: #0074bd;
+}
+
+.footer-subscribe-input::placeholder {
+    font-family: 'Montserrat', sans-serif;
+}
+.footer-subscribe-button {
+    background-color: var(--purple);
+    border-radius: 10px;
+    padding: 12px 30px;
+    color: white;
+    box-shadow: 0 7px 0px var(--purple-shadow);
+}
+
+.footer-subscribe-button:active {
+    box-shadow: 0 2px 0px var(--purple-shadow);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom img {
+    height: 30px;
+}
+
+.footer-links a {
+    margin-right: 15px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.footer-links a:last-child {
+    margin: 0;
+}
+
+.footer-logo {
+    font-weight: 600;
+}
+
+.footer-logo span {
+    font-size: 12px;
+    margin-left: 5px;
+}
 
 @media screen and (max-width: 1200px) {
     .hp1-image {
@@ -389,7 +509,7 @@
 	}
 
 	.hp1-get-started {
-		margin-top: 50px;
+		margin-top: 35px;
 	}
 
 	.hp2-area {
@@ -404,9 +524,17 @@
 
 @media screen and (max-width: 950px) {
 	.hp3-course-1, .hp3-course-2, .hp3-course-3 {
-		height: 450px;
+		height: 440px;
 		width: 25%;
 	}
+
+    .hp3-course-title-text {
+        text-align: left;
+    }
+
+    .hp3-course-title {
+        align-items: flex-start;
+    }
 
 	.hp3-course-image {
 		display: none;

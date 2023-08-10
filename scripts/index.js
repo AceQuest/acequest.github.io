@@ -1,4 +1,4 @@
-const version = "v.1.6.2";
+const version = "v.1.6.4";
 const publicAddress = ["https://acequest.github.io/", "https://acequest.github.io/index.html"];
 const privateAddress = "http://127.0.0.1:5500/index.html";
 
@@ -18,7 +18,9 @@ function animateValue(obj, start, end, duration) {
 }
 
 $(function () {
-    $("#version").replaceWith(version);
+    $(".version").each(function (i, obj) {
+        obj.replaceWith(version)
+    });
 
     localStorage.setItem("page_view", Number(visitCount) + 1);
 
@@ -30,8 +32,10 @@ $(function () {
         scroll_pos = $(this).scrollTop();
         if (scroll_pos > 50) {
             $("nav").addClass("active");
+            $(".back-to-top").css("display", "flex");
         } else {
             $("nav").removeClass("active");
+            $(".back-to-top").css("display", "none");
         }
 
         if (scroll_pos > 600) {
@@ -51,16 +55,20 @@ $(function () {
         });
     });
 
+    $(".back-to-top").on("click", function () {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+
     /** NAVIGATION */
     $(".hamburger").on("click", function () {
-        $(".min-nav-area").addClass("active").css("z-index", "100");
+        $(".min-nav-wrapper").addClass("active").css("z-index", "100");
     });
 
     $(".close").on("click", function () {
-        $(".min-nav-area").removeClass("active").css("z-index", "-1");
+        $(".min-nav-wrapper").removeClass("active").css("z-index", "-1");
     });
 
     $(".window-button").on("click", function () {
-        $(".min-nav-area").removeClass("active").css("z-index", "-1");
+        $(".min-nav-wrapper").removeClass("active").css("z-index", "-1");
     });
 })
