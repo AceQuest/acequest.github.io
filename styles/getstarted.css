@@ -23,6 +23,8 @@
     justify-content: center;
     position: relative;
     justify-items: flex-start;
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
 }
 
 .progress-i {
@@ -98,4 +100,11 @@
 
 .input-stage-1, .input-stage-2, .input-stage-3, .input-stage-4 {
     display: none;
+}
+
+@media screen and (max-width: 800px) {
+	.area {
+        width: 90%;
+        max-width: none;
+    }
 }

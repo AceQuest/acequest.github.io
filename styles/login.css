@@ -223,3 +223,14 @@ input[type="password"] {
     width: 100px;
     height: 100px;
 }
+
+@media screen and (max-width: 620px) {
+	.login-area {
+        width: 90%;
+        max-width: none;
+    }
+
+    .password input {
+        padding-top: 1px;
+    }
+}

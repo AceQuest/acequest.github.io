@@ -4,8 +4,8 @@ const courses = {
         "non-ib": ["Math 10C", "Science 10-1"]
     },
     "grade 11": {
-        "ib": ["Math 10C IB", "Physics 25 IB"],
-        "non-ib": ["Math 10C", "Science 10-1"]
+        "ib": ["Math 20 IB", "Physics 20 IB"],
+        "non-ib": ["Math 20-1", "Science 20-1", "Physics 20-1"]
     },
 }
 
@@ -13,6 +13,7 @@ $(function () {
     var grade;
     var ibtf;
     var course;
+    var sptf;
 
 
     $(".input-stage-1").css("display", "flex");
@@ -49,10 +50,10 @@ $(function () {
                 $(".input-stage-3").addClass("active");
             }, 500);
         }, 2000);
+        console.log($(".input-stage-3 .input-stage-buttons").children());
     });
 
-    $(".input-3").on("click", function () {
-        console.log("a");
+    $(".input-stage-buttons").on("click", ".input-3", function () {
         course = this.classList[2];
         $(".progress-i").css("width", "75%");
         $(".input-stage-3").removeClass("active");
@@ -64,9 +65,21 @@ $(function () {
             }, 500);
         }, 2000);
     });
-
     $(".input-4").on("click", function () {
         $(".progress-i").css("width", "100%");
         $(".input-stage-4").removeClass("active");
+
+        if (this.classList[2] == "yes") { sptf = true; } 
+        else { sptf = false; }
+
+        setTimeout(function () {
+            $(".progress-o").css("opacity", "0");
+
+            if (sptf) {
+                window.location.href = "sign-up.html";
+            } else {
+                window.location.href = `${course.toLowerCase().replace(" ", "_")}.html`
+            }
+        }, 2000);
     });
 })
