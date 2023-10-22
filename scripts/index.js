@@ -1,4 +1,4 @@
-const version = "v.1.6.4";
+const version = "v.1.6.6";
 const publicAddress = ["https://acequest.github.io/", "https://acequest.github.io/index.html"];
 const privateAddress = "http://127.0.0.1:5500/index.html";
 
@@ -29,14 +29,6 @@ $(function () {
     /*Updated nav each page*/
 
     $(document).on("scroll", function () {
-        scroll_pos = $(this).scrollTop();
-        if (scroll_pos > 50) {
-            $("nav").addClass("active");
-            $(".back-to-top").css("display", "flex");
-        } else {
-            $("nav").removeClass("active");
-            $(".back-to-top").css("display", "none");
-        }
 
         if (scroll_pos > 600) {
             if (!animated) {

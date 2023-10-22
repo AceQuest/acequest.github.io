@@ -1,58 +1,80 @@
 .nav-wrapper {
     display: flex;
-    background-color: white;
-    width: 7%;
+    background-color: rgb(243, 244, 246);
+    width: 30%;
     max-width: 250px;
     height: 100vh;
+    transition: 0.15s width ease-in-out;
 }
 
 .nav-area {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border-right: 3px solid grey;
-    padding-top: 50px;
+    justify-content: space-between;
+    padding: 10px;
 }
 
-.nav-img img {
-    height: 35px;
-    margin-bottom: 20px;
+.nav-top {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-logo-collapse {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.nav-logo img {
+    width: 90%;
+}
+
+.nav-collapse {
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-collapse:hover {
+    background-color: rgb(228, 228, 228);
+}
+
+.nav-wrapper.active {
+    width: 65px;
+}
+
+.nav-wrapper.active .nav-link p, .nav-wrapper.active .nav-logo {
+    display: none;
 }
 
 .nav-link {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    padding: 15px;
     font-weight: 600;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.nav-link svg {
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
     border-radius: 10px;
-    transition: all 0.15s ease-in-out;
-    color: black;
-    width: fit-content;
+    align-items: center;
     justify-content: center;
-    position: relative;
 }
 
 .nav-link:hover {
     background-color: rgb(228, 228, 228);
 }
 
-.nav-link.current {
-    border: 3px solid var(--blue);
-    background-color: rgb(182, 237, 255);
-}
-
-.nav-link p {
-    display: none;
-}
-
-.nav-link:hover p {
-    display: flex;
-    position: absolute;
-    left: 90px;
-    background-color: rgba(0, 0, 0, 0.801);
-    color: white;
-    padding: 5px 8px;
-    border-radius: 5px;
+.nav-bottom {
+    justify-self: flex-end;
 }

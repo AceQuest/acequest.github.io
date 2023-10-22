@@ -3,11 +3,12 @@ nav {
     display: flex;
     justify-content: center;
     height: 60px;
-    background-color: lightskyblue;
     transition: all 0.15s ease-in-out;
     z-index: 30;
     color: black;
     position: fixed;
+    opacity: 90%;
+    background-color: rgb(243, 244, 246);
 }
 
 nav.active {
@@ -59,10 +60,6 @@ nav.active {
 
 .nav-link:hover {
     color: #0074bd;
-}
-
-.nav-link:hover svg[stroke] {
-    stroke: #0074bd;
 }
 
 .nav-link.active {
@@ -159,6 +156,7 @@ nav.active {
 .hamburger:hover .hamburger-hover {
     transform: scale(3.8);
     opacity: 0.2;
+    background-color: var(--purple-shadow);
 }
 
 .hamburger {

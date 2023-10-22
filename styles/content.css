@@ -7,290 +7,80 @@
     width: 100%;
     background-color: rgb(245, 245, 245);
     justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .content-area {
-    padding: 20px;
-    width: 80%;
-    max-width: 1000px;
-    display: flex;
-    flex-direction: column;
-}
-
-.link-tree-area {
-    display: flex;
-    height: 20%;
-    align-items: center;
-}
-
-.link-tree {
-    background-color: var(--blue);
     border-radius: 10px;
-    color: white;
-    box-shadow: 0 7px 0px var(--blue-shadow);
-    padding: 13px 17px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border: 1px solid rgb(176, 159, 233);
+    background-color: white;
+    width: 100%;
+    padding: 50px;
 }
 
-.link-tree:active {
-    transform: translateY(5px);
-    box-shadow: 0 2px 0px var(--blue-shadow);
-}
-
-.link-tree svg {
-    margin-right: 10px;
-}
-
-.course-area {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.course-desc {
+.course-details {
     margin-bottom: 30px;
 }
 
-.course-desc p:first-child {
+.course-title {
     font-weight: 700;
     font-size: 30px;
 }
 
+.course-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
 .course-unit {
     display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
-}
-
-.unit-header {
-    display: flex;
-    justify-content: space-between;
-    background-color: inherit;
-    border-radius: 10px;
-    align-items: center;
-    padding: 10px 20px;
-    color: white;
-    width: 70%;
-}
-
-.unit-desc p:first-child {
-    font-weight: 700;
-    font-size: 25px;
-}
-
-.unit-progress-o {
-    width: 30%;
-    background-color: white;
-    height: 20px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-.unit-progress-o p {
-    z-index: 1000;
-    font-weight: 700;
-    color: black;
-    opacity: 0.5;
-}
-
-.unit-progress-i {
-    width: 70%;
-    background-color: rgb(139, 108, 239);
-    height: 100%;
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    display: flex;
-    justify-content: center;
-}
-
-
-.unit-progress-s {
-    width: 85%;
-    background-color: rgb(176, 159, 233);
-    height: 40%;
-    margin-top: 4px;
-    border-radius: 10px;
-}
-
-.unit-content {
-    display: flex;
-    flex-direction: column;
-    padding: 10px 20px 15px 20px;
-}
-
-.unit-quizzes {
-    display: grid;
-    grid-template-rows: 0.5fr 0.5fr;
-    grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
-    row-gap: 20px;
-    position: relative;
-    justify-items: center;
-}
-
-.quiz-desc {
-    display: none;
-}
-
-.quiz-link {
-    background-color: var(--blue);
-    border-radius: 40px;
-    color: white;
-    box-shadow: 0 7px 0px var(--blue-shadow);
-    padding: 13px 17px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.quiz-link:active {
-    transform: translateY(5px);
-    box-shadow: 0 2px 0px var(--blue-shadow);
-}
-
-.quiz-link p {
-    font-size: 18px;
-}
-
-.quiz-button-area {
-    position: relative;
-}
-
-/*
-<div class="quiz-desc">
-    <p class="quiz-title">Quadratics Unit Test</p>
-    <p class="quiz-contents"></p>
-    <a class="button">Start Quiz</a>
-</div>
-*/
-@keyframes quiz-desc-animate {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-4px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-
-}
-
-.quiz-desc {
-    position: absolute;
-    top: 85px;
-    left: -78px;
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-    padding: 20px;
-    background-color: var(--blue);
-    z-index: 100;
-    border-radius: 10px;
-    transition: all 0.5s ease-in-out;
-    color: white;
-    transform: scale(0);
-    visibility: hidden;
-}
-
-.quiz-desc::before {
-    background-color: var(--blue);
-    position: absolute;
-    top: -14px;
-    left: 45%;
-    content: '';
-    width: 20px;
-    height: 20px;
-    transform: rotate(45deg);
-}
-
-.quiz-desc.active {
-    visibility: visible;
-    transform: scale(1);
-}
-
-.quiz-title {
-    font-weight: 600;
-    font-size: 20px;
-}
-
-.quiz-desc a {
-    background-color: white;
-    box-shadow: 0 7px 0px rgb(228, 228, 228);
-    width: 100%;
-    border-radius: 10px;
-    text-align: center;
-    color: var(--blue);
-    padding: 10px 0px;
-    margin-top: 20px;
-}
-
-.quiz-desc a:active {
-    box-shadow: 0 2px 0px rgb(228, 228, 228);
-}
-
-.unit-quizzes .quiz-not-started {
-    width: 30px;
-    height: 30px;
-}
-
-.quiz-finished {
-    display: none;
-}
-
-.unit-border-bottom {
-    border-bottom: 2px solid inherit;
-    margin-top: 10px;
     margin-bottom: 10px;
+    border: 2px solid rgb(243, 244, 246);
+    border-radius: 10px;
+    padding: 10px;
 }
 
-.unit-test {
+.unit-number {
+    border-radius: 50%;
+    padding: 10px;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    color: inherit;
+    background-color: inherit;
+    margin-right: 10px;
+}
+
+.unit-title {
+    font-weight: 700;
+    font-size: 20px;
+    color: black;
+    display: flex;
     align-items: center;
 }
 
-.unit-test p {
-    font-weight: 600;
-    margin-top: 4px;
+.unit-desc {
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 25px;
 }
 
-.unit-1 .course-button {
-    background-color: var(--green);
-    box-shadow: 0 7px 0px var(--green-shadow);
+.unit-1 .unit-number {
+	color: rgb(255, 0, 0);
+    background-color: rgba(255, 0, 0, 0.2);
 }
 
-.unit-1 .course-button:active {
-    box-shadow: 0 2px 0px var(--green-shadow);
+.unit-2 .unit-number {
+    color: var(--purple);
+    background-color: rgb(139, 108, 239, 0.2);
 }
 
-.unit-1 .unit-header {
-    background-color: var(--green);
-}
-
-.unit-1 .unit-border-bottom {
-    border-bottom: 2px solid var(--green);
-}
-
-.unit-2 .course-button {
-    background-color: var(--blue);
-    box-shadow: 0 7px 0px var(--blue-shadow);
-}
-
-.unit-2 .course-button:active {
-    box-shadow: 0 2px 0px var(--blue-shadow);
-}
-
-.unit-2 .unit-header {
-    background-color: var(--blue);
-}
-
-.unit-2 .unit-border-bottom {
-    border-bottom: 2px solid var(--blue);
+.unit-3 .unit-number {
+	color: var(--green);
+    background-color: rgb(0, 194, 129, 0.2);
 }
