@@ -2,7 +2,7 @@
     display: flex;
 }
 
-.dashboard-wrapper {
+.subjects-wrapper {
     display: flex;
     width: 100%;
     background-color: rgb(245, 245, 245);
@@ -12,7 +12,7 @@
     padding-right: 10px;
 }
 
-.dashboard-area {
+.subjects-area {
     border-radius: 10px;
     border: 1px solid grey;
     background-color: white;
@@ -24,26 +24,26 @@
     align-items: center;
 }
 
-.dashboard-temporary {
+.subjects-temporary {
     font-weight: 600;
     font-size: 40px;
     margin-bottom: 15px;
 }
 
-.dashboard-temporary-2 {
+.subjects-temporary-2 {
     font-weight: 600;
     font-size: 18px;
     color: lightgrey;
 }
 
-.dashboard-temporary-3 {
+.subjects-temporary-3 {
     font-weight: 600;
     font-size: 18px;
     color: lightgrey;
     margin-bottom: 20px;
 }
 
-.dashboard-temporary-4 {
+.subjects-temporary-4 {
     font-weight: 600;
     font-size: 18px;
     color: rgb(230, 230, 230);

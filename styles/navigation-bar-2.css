@@ -1,10 +1,11 @@
 .nav-wrapper {
     display: flex;
     background-color: rgb(243, 244, 246);
-    width: 30%;
-    max-width: 250px;
+    width: 280px;
     height: 100vh;
-    transition: 0.15s width ease-in-out;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
 }
 
 .nav-area {
@@ -23,12 +24,13 @@
 .nav-logo-collapse {
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 10px;
+    justify-content: space-between;
 }
 
 .nav-logo img {
-    width: 90%;
+    width: 100%;
 }
 
 .nav-collapse {
@@ -44,14 +46,6 @@
     background-color: rgb(228, 228, 228);
 }
 
-.nav-wrapper.active {
-    width: 65px;
-}
-
-.nav-wrapper.active .nav-link p, .nav-wrapper.active .nav-logo {
-    display: none;
-}
-
 .nav-link {
     display: flex;
     align-items: center;
@@ -62,13 +56,22 @@
     cursor: pointer;
 }
 
+.nav-link p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: 7.5px;
+}
+
 .nav-link svg {
+    display: flex;
     cursor: pointer;
     padding: 5px;
-    display: flex;
     border-radius: 10px;
     align-items: center;
     justify-content: center;
+    max-width: 24px;
+    min-width: 24px;
 }
 
 .nav-link:hover {
@@ -77,4 +80,12 @@
 
 .nav-bottom {
     justify-self: flex-end;
+}
+
+.nav-wrapper.active {
+    width: 63px;
+}
+
+.nav-wrapper.active .nav-link p, .nav-wrapper.active .nav-logo {
+    display: none;
 }
