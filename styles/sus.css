@@ -5,46 +5,201 @@
 .content-wrapper {
     display: flex;
     width: 100%;
-    background-color: rgb(245, 245, 245);
+    background-color: white;
     justify-content: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
+    align-content: space-between;
+}
+
+.unit-nav {
+    width: 30%;
+    max-width: 300px;
+    height: 100%;
+    border-right: 1px solid rgb(224, 224, 224);
+    border-left: 1px solid rgb(224, 224, 224);
+}
+
+.unit-nav-area {
+    background-color: white;
+    height: 100%;
+}
+
+.unit-nav-desc {
+    border-bottom: 1px solid rgb(224, 224, 224);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.unit-nav-subject-name {
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.unit-nav-link-tree {
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+.units-nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+}
+
+.unit-name {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.units-nav-bottom {
+    display: flex;
+    justify-content: space-around;
+}
+
+.units-nav-bottom button {
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--purple);
+    color: white;
+    padding: 5px;
+    width: 100px;
+}
+
+.unit-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px 10px 10px;
+    margin-top: 10px;
+}
+
+.unit-quiz {
+    padding: 15px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+}
+
+.unit-quiz:last-child {
+    margin: 0;
+    border: none;
 }
 
 .content-area {
-    border-radius: 10px;
-    border: 1px solid lightgrey;
     background-color: white;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 30px;
 }
 
-.quiz-area {
-    border: 1px solid lightgrey;
-    border-radius: 10px;
+.quiz-wrapper {
+    height: 100%;
+    width: 50%;
+    max-width: 750px;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress-o {
     width: 100%;
-    max-width: 700px;
-    height: fit-content;
+    background-color: lightgrey;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    justify-items: flex-start;
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+    margin-top: 50px;
+}
+
+.progress-i {
+    width: 30%;
+    background-color: var(--purple);
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: width 1s ease-in-out;
+}
+
+
+.progress-s {
+    width: 100%;
+    margin: 0px 15px;
+    background-color: rgb(176, 159, 233);
+    height: 40%;
+    margin-top: 4px;
+    border-radius: 10px;
+}
+
+.quiz-desc {
+    align-self: flex-start;
+    margin-bottom: 75px;
+}
+
+.quiz-link-tree {
+    color: grey;
+    font-size: 18px;
+}
+
+.quiz-link-tree span {
+    text-decoration:underline;
+}
+
+.quiz-name {
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.quiz-topic {
+    font-size: 20px;
+}
+
+.quiz-area {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 200px;
+    justify-content: space-between;
+}
+
+.quiz-left {
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    
+}
+
+.quiz-right {
+    display: flex;
+    flex-direction: column;
 }
 
 .quiz-top {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 30px 30px 0px 30px;
 }
 
 .quiz-question-details p {
     font-weight: 600;
     font-size: 19px;
     margin-bottom: 20px;
-    
 }
 
 .quiz-question-details p span {
@@ -56,13 +211,13 @@
 }
 
 .quiz-question {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .quiz-bottom {
     display: flex;
     justify-content: space-between;
-    margin-top: 35px;
+    padding: 35px 30px 30px 30px;
 }
 
 .quiz-question-reactions {

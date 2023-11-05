@@ -1,4 +1,4 @@
-const version = "v.1.6.6";
+const version = "v.1.6.9";
 const publicAddress = ["https://acequest.github.io/", "https://acequest.github.io/index.html"];
 const privateAddress = "http://127.0.0.1:5500/index.html";
 

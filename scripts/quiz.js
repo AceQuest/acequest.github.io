@@ -162,6 +162,7 @@ class Quiz {
 }
 
 $(function () {
+    $('.nav-wrapper').addClass('active');
     function handle_mousedown(i) {
         window.drag = {};
         drag.pageX0 = i.pageX;
