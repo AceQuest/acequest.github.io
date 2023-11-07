@@ -8,7 +8,8 @@ nav {
     color: black;
     position: fixed;
     opacity: 90%;
-    background-color: rgb(243, 244, 246);
+    background-color: #05051e;
+    color: #e2e8ffbf;
 }
 
 nav.active {
@@ -50,13 +51,11 @@ nav.active {
 
 .nav-link,
 .nav svg {
-    color: black;
     text-decoration: none;
     cursor: pointer;
     font-weight: 600;
     transition: all 0.35s ease-in-out;
 }
-
 
 .nav-link:hover {
     color: #0074bd;
@@ -148,9 +147,8 @@ nav.active {
 
 
 .nav-link img {
-    height: 90px;
+    height: 32px;
     margin-right: 20px;
-    object-fit: cover;
 }
 
 .hamburger:hover .hamburger-hover {
